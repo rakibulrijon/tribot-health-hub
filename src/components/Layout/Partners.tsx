@@ -18,9 +18,9 @@ const Partners = () => {
   ];
 
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-8 bg-muted/30">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
             Our Partners & Collaborators
           </h2>
@@ -44,16 +44,16 @@ const Partners = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {partners.map((partner, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/5 lg:basis-1/7">
-                  <div className="flex flex-col items-center justify-center h-32 group transition-all duration-500 ease-in-out">
-                    <div className="transform transition-all duration-500 ease-in-out group-hover:scale-110 [&:nth-child(4)]:scale-125 [&:nth-child(4)]:opacity-100 opacity-60 hover:opacity-100">
+                  <div className="flex flex-col items-center justify-center h-40 group transition-all duration-700 ease-in-out">
+                    <div className="transform transition-all duration-700 ease-in-out group-hover:scale-125 [&:nth-child(4)]:scale-140 [&:nth-child(4)]:opacity-100 opacity-70 hover:opacity-100 animate-pulse-slow">
                       {typeof partner.logo === 'string' && (partner.logo.endsWith('.png') || partner.logo.endsWith('.webp')) ? (
                         <img 
                           src={partner.logo} 
                           alt={partner.name}
-                          className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-500 ease-in-out transform hover:scale-110"
+                          className="max-h-24 max-w-full object-contain transition-all duration-700 ease-in-out transform hover:scale-125 animate-fade-in"
                         />
                       ) : (
-                        <div className="text-3xl text-muted-foreground hover:text-primary transition-all duration-500 ease-in-out transform hover:scale-110">{partner.logo}</div>
+                        <div className="text-5xl text-muted-foreground hover:text-primary transition-all duration-700 ease-in-out transform hover:scale-125 animate-bounce">{partner.logo}</div>
                       )}
                     </div>
                   </div>
