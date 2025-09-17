@@ -25,7 +25,7 @@ const Hero = () => {
 
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
                 <span className="text-gray-900">Transforming Emergency Care with</span>
                 <br />
                 <span className="text-gray-800">AI-Powered Triage</span>
@@ -36,17 +36,17 @@ const Hero = () => {
             </div>
 
             {/* Subtitle */}
-            <p className="text-2xl text-gray-800 leading-relaxed max-w-2xl font-medium">
+            <p className="text-xl text-gray-800 leading-relaxed max-w-2xl font-medium">
               Every second counts in the Emergency Department. Yet, for millions of linguistically diverse patients, language barriers delay care, increase risks, and worsen outcomes.
             </p>
             
             {/* Additional Context */}
-            <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-2xl">
               TRIBOT is a conversational AI chatbot designed to bridge this gap. By combining cutting-edge AI with clinical expertise, TRIBOT enables real-time multilingual interpretation and clinically validated triage classification — ensuring safe, timely, and equitable care.
             </p>
             
             {/* Vision Statement */}
-            <p className="text-xl text-gray-900 font-semibold max-w-2xl">
+            <p className="text-lg text-gray-900 font-semibold max-w-2xl">
               Our vision: A world where language is never a barrier to urgent, life-saving healthcare.
             </p>
 
@@ -67,7 +67,7 @@ const Hero = () => {
               <img 
                 src={emergencyCare} 
                 alt="AI-Powered Emergency Care Technology" 
-                className="w-4/5 h-auto rounded-2xl shadow-hero mx-auto"
+                className="w-full h-auto rounded-2xl shadow-hero"
               />
             </div>
             {/* Image Background Glow */}
