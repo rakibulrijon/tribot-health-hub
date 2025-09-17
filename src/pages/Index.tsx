@@ -9,8 +9,8 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <AboutTribot />
         <Partners />
+        <AboutTribot />
       </main>
     </div>
   );
