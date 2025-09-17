@@ -24,12 +24,6 @@ const Hero = () => {
         <div className="absolute inset-0 bg-white/20 backdrop-blur-sm rounded-lg"></div>
         <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
           <div className="space-y-8">
-            {/* Icon */}
-            <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center animate-pulse-slow">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
-              </svg>
-            </div>
 
             {/* Main Heading */}
             <div className="space-y-6">
