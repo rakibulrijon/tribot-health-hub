@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import emergencyCare from "@/assets/emergency-triage.jpg";
+import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   return (
@@ -10,7 +11,15 @@ const Hero = () => {
         <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-gradient-accent rounded-full opacity-10 animate-pulse-slow"></div>
       </div>
 
-      <div className="container mx-auto px-6 py-6 relative z-10">
+      <div 
+        className="container mx-auto px-6 py-6 relative z-10"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             {/* Icon */}
