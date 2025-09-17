@@ -1,4 +1,5 @@
 import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -139,6 +140,7 @@ const Technology = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };
