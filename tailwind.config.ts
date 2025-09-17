@@ -57,6 +57,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        tribot: {
+          blue: "hsl(var(--tribot-blue))",
+          green: "hsl(var(--tribot-green))",
+          orange: "hsl(var(--tribot-orange))",
+          purple: "hsl(var(--tribot-purple))",
+        },
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-accent": "var(--gradient-accent)",
+        "gradient-subtle": "var(--gradient-subtle)",
+      },
+      boxShadow: {
+        hero: "var(--shadow-hero)",
+        card: "var(--shadow-card)",
       },
       borderRadius: {
         lg: "var(--radius)",
