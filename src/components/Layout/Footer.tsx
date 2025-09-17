@@ -33,13 +33,17 @@ ${formData.comments}`;
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-purple-900 text-white overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-pink-400 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-purple-400 rounded-full opacity-15 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-violet-500 rounded-full opacity-10 blur-3xl"></div>
-      </div>
+    <footer className="relative text-white overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/src/assets/footer-background.png')`
+        }}
+      ></div>
+      
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-purple-900/30"></div>
 
       <div className="relative z-10 container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-16">
@@ -165,7 +169,7 @@ ${formData.comments}`;
 
         {/* Bottom section */}
         <div className="mt-16 pt-8 border-t border-purple-400/30 text-center text-purple-200 text-sm">
-          <p>&copy; 2024 TRIBOT Research Team. All rights reserved.</p>
+          <p>&copy; 2025 TRIBOT Research Team. All rights reserved.</p>
         </div>
       </div>
     </footer>
