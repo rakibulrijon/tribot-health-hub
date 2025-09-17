@@ -15,22 +15,26 @@ const Header = () => {
             <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
               HOME
             </a>
-            <a href="#accelerator" className="text-foreground hover:text-primary transition-colors font-medium">
-              ACCELERATOR
+            <a href="#technology" className="text-foreground hover:text-primary transition-colors font-medium">
+              TECHNOLOGY
             </a>
-            <a href="#news" className="text-foreground hover:text-primary transition-colors font-medium">
-              NEWS
+            <a href="#applications" className="text-foreground hover:text-primary transition-colors font-medium">
+              APPLICATIONS
             </a>
-            <a href="#community" className="text-foreground hover:text-primary transition-colors font-medium">
-              COMMUNITY
+            <a href="#research" className="text-foreground hover:text-primary transition-colors font-medium">
+              RESEARCH
             </a>
-            <a href="#amplify-tech" className="text-foreground hover:text-primary transition-colors font-medium">
-              AMPLIFY TECH
+            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
+              ABOUT
             </a>
-            <a href="#investment" className="text-foreground hover:text-primary transition-colors font-medium">
-              INVESTMENT
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
+              CONTACT
             </a>
           </div>
+
+          <Button variant="hero" className="hidden md:flex">
+            TRIBOT PROTOTYPE
+          </Button>
 
           <Button 
             className="md:hidden"

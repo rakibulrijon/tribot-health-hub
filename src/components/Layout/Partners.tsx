@@ -1,13 +1,13 @@
 const Partners = () => {
   const partners = [
-    { name: "Queensland Government", logo: "QLD" },
-    { name: "Notion", logo: "NOTION" },
-    { name: "Gold Coast Health", logo: "GCH" },
-    { name: "QIC", logo: "QIC" },
-    { name: "Amazon Web Services", logo: "AWS" },
-    { name: "Google Cloud", logo: "CLOUD" },
-    { name: "Cake Equity", logo: "CAKE" },
-    { name: "Digital Health", logo: "DHF" },
+    { name: "Queensland Health", logo: "QLD Health" },
+    { name: "Griffith University", logo: "GRIFFITH" },
+    { name: "Gold Coast Health", logo: "GC Health" },
+    { name: "Australian Government", logo: "AU GOV" },
+    { name: "Queensland Government", logo: "QLD GOV" },
+    { name: "Medical Research", logo: "MED RES" },
+    { name: "AI Institute", logo: "AI INST" },
+    { name: "Healthcare Innovation", logo: "HC INNOV" },
   ];
 
   return (

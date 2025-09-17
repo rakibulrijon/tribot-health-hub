@@ -1,5 +1,6 @@
 import Header from "@/components/Layout/Header";
 import Hero from "@/components/Layout/Hero";
+import AboutTribot from "@/components/Layout/AboutTribot";
 import Partners from "@/components/Layout/Partners";
 
 const Index = () => {
@@ -8,6 +9,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <AboutTribot />
         <Partners />
       </main>
     </div>

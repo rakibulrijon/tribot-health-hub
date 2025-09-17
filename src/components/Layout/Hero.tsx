@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.jpg";
+import emergencyCare from "@/assets/emergency-care.jpg";
 
 const Hero = () => {
   return (
@@ -23,13 +23,10 @@ const Hero = () => {
 
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-foreground">Tribot is ground zero</span>
+              <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+                <span className="text-foreground">Transforming Emergency Care with</span>
                 <br />
-                <span className="text-foreground">for </span>
-                <span className="bg-gradient-hero bg-clip-text text-transparent">AI robotics</span>
-                <br />
-                <span className="text-foreground">startups.</span>
+                <span className="bg-gradient-hero bg-clip-text text-transparent">AI-Powered Triage</span>
               </h1>
 
               {/* Decorative Line */}
@@ -38,13 +35,13 @@ const Hero = () => {
 
             {/* Subtitle */}
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              Tribot backs early-stage founders with community, education, and investment in the future of AI robotics.
+              Every second counts in the Emergency Department. Yet, for millions of linguistically diverse patients, language barriers delay care, increase risks, and worsen outcomes.
             </p>
 
             {/* CTA Button */}
             <div className="pt-4">
               <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                Get Investment
+                Try TRIBOT Prototype
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -56,8 +53,8 @@ const Hero = () => {
           <div className="relative">
             <div className="relative z-10">
               <img 
-                src={heroImage} 
-                alt="AI Robotics Technology" 
+                src={emergencyCare} 
+                alt="AI-Powered Emergency Care Technology" 
                 className="w-full h-auto rounded-2xl shadow-hero"
               />
             </div>
