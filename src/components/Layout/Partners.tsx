@@ -10,6 +10,9 @@ const Partners = () => {
     { name: "UNSW Sydney", logo: unswLogo },
     { name: "NHMRC", logo: nhmrcLogo },
     { name: "SWSLHD", logo: swslhdLogo },
+    { name: "UNSW Sydney", logo: unswLogo },
+    { name: "NHMRC", logo: nhmrcLogo },
+    { name: "SWSLHD", logo: swslhdLogo },
   ];
 
   return (
@@ -26,13 +29,15 @@ const Partners = () => {
           <Carousel
             plugins={[
               Autoplay({
-                delay: 4000,
+                delay: 2000,
                 stopOnInteraction: false,
+                stopOnMouseEnter: false,
               }),
             ]}
             opts={{
-              align: "center",
+              align: "start",
               loop: true,
+              dragFree: true,
             }}
             className="w-full"
           >
