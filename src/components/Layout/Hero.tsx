@@ -4,24 +4,24 @@ import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[40vh] flex items-center bg-gradient-subtle overflow-hidden">
+    <section 
+      className="relative min-h-[40vh] flex items-center bg-gradient-subtle overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -left-20 w-60 h-60 bg-gradient-hero rounded-full opacity-15 animate-float"></div>
         <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-gradient-accent rounded-full opacity-10 animate-pulse-slow"></div>
       </div>
 
-      <div 
-        className="container mx-auto px-6 py-6 relative z-10"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
+      <div className="container mx-auto px-6 py-6 relative z-10">
         {/* Text readability overlay */}
-        <div className="absolute inset-0 bg-white/30 backdrop-blur-sm rounded-lg"></div>
+        <div className="absolute inset-0 bg-white/20 backdrop-blur-sm rounded-lg"></div>
         <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
           <div className="space-y-8">
             {/* Icon */}
