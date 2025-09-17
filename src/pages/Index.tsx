@@ -2,6 +2,7 @@ import Header from "@/components/Layout/Header";
 import Hero from "@/components/Layout/Hero";
 import AboutTribot from "@/components/Layout/AboutTribot";
 import Partners from "@/components/Layout/Partners";
+import Footer from "@/components/Layout/Footer";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
         <Partners />
         <AboutTribot />
       </main>
+      <Footer />
     </div>
   );
 };
