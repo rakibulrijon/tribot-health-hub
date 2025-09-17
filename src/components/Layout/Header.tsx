@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header className={`w-full border-b sticky top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[hsl(280_100%_70%)] border-[hsl(280_90%_60%)]' : 'bg-white border-gray-100'
+      isScrolled ? 'bg-[#a855f7] border-[#9333ea]' : 'bg-white border-gray-100'
     }`}>
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center">

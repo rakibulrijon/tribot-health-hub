@@ -34,7 +34,7 @@ ${formData.comments}`;
 
   return (
     <footer className="relative text-white overflow-hidden">
-      {/* Background image */}
+      {/* Background image with purple tint */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -42,8 +42,8 @@ ${formData.comments}`;
         }}
       ></div>
       
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-purple-900/30"></div>
+      {/* Purple overlay to match reference */}
+      <div className="absolute inset-0 bg-[#a855f7] mix-blend-multiply"></div>
 
       <div className="relative z-10 container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-16">
