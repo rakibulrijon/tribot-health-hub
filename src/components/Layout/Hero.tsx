@@ -3,12 +3,11 @@ import emergencyCare from "@/assets/emergency-triage.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center bg-gradient-subtle overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-hero rounded-full opacity-20 animate-float"></div>
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-accent rounded-full opacity-15 animate-pulse-slow"></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute -top-20 -left-20 w-60 h-60 bg-gradient-hero rounded-full opacity-15 animate-float"></div>
+        <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-gradient-accent rounded-full opacity-10 animate-pulse-slow"></div>
       </div>
 
       <div className="container mx-auto px-6 py-20 relative z-10">
