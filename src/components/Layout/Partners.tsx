@@ -45,15 +45,15 @@ const Partners = () => {
               {partners.map((partner, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/5 lg:basis-1/7">
                   <div className="flex flex-col items-center justify-center h-40 group transition-all duration-700 ease-in-out">
-                    <div className="transform transition-all duration-700 ease-in-out group-hover:scale-125 [&:nth-child(4)]:scale-140 [&:nth-child(4)]:opacity-100 opacity-70 hover:opacity-100 animate-pulse-slow">
+                    <div className="transform transition-all duration-700 ease-in-out group-hover:scale-125 opacity-100">
                       {typeof partner.logo === 'string' && (partner.logo.endsWith('.png') || partner.logo.endsWith('.webp')) ? (
                         <img 
                           src={partner.logo} 
                           alt={partner.name}
-                          className="max-h-24 max-w-full object-contain transition-all duration-700 ease-in-out transform hover:scale-125 animate-fade-in"
+                          className="max-h-24 max-w-full object-contain transition-all duration-700 ease-in-out transform hover:scale-125"
                         />
                       ) : (
-                        <div className="text-5xl text-muted-foreground hover:text-primary transition-all duration-700 ease-in-out transform hover:scale-125 animate-bounce">{partner.logo}</div>
+                        <div className="text-5xl text-foreground hover:text-primary transition-all duration-700 ease-in-out transform hover:scale-125">{partner.logo}</div>
                       )}
                     </div>
                   </div>
