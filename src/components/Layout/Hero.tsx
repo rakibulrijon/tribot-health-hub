@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import emergencyCare from "@/assets/emergency-triage.jpg";
 import heroBackground from "@/assets/hero-background.png";
+import PrototypeAccessForm from "./PrototypeAccessForm";
 
 const Hero = () => {
   return (
@@ -52,12 +52,7 @@ const Hero = () => {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                Try TRIBOT Prototype
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Button>
+              <PrototypeAccessForm />
             </div>
           </div>
 
