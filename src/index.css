@@ -41,7 +41,7 @@ All colors MUST be HSL.
     --tribot-blue: 217 91% 60%;
     --tribot-green: 166 76% 46%;
     --tribot-orange: 15 86% 55%;
-    --tribot-purple: 280 100% 70%;
+    --tribot-purple: 260 70% 62%;
 
     --gradient-hero: linear-gradient(135deg, hsl(var(--tribot-blue)) 0%, hsl(var(--tribot-green)) 50%, hsl(var(--tribot-purple)) 100%);
     --gradient-accent: linear-gradient(45deg, hsl(var(--tribot-orange)) 0%, hsl(var(--accent)) 100%);
