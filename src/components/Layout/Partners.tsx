@@ -10,11 +10,11 @@ const Partners = () => {
     { name: "UNSW Sydney", logo: unswLogo },
     { name: "NHMRC", logo: nhmrcLogo },
     { name: "SWSLHD", logo: swslhdLogo },
-    { name: "Bankstown-Lidcombe Hospital", logo: "🏥" },
-    { name: "Westmead Hospital", logo: "🏥" },
-    { name: "Prince of Wales Hospital", logo: "🏥" },
-    { name: "NSW Health", logo: "⚕️" },
-    { name: "eHealth NSW", logo: "💻" },
+    { name: "Bankstown-Lidcombe Hospital", logo: "ones" },
+    { name: "Westmead Hospital", logo: "ones" },
+    { name: "Prince of Wales Hospital", logo: "ones" },
+    { name: "NSW Health", logo: "ones" },
+    { name: "eHealth NSW", logo: "ones" },
   ];
 
   return (
