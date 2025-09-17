@@ -19,9 +19,7 @@ const Hero = () => {
         <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-gradient-accent rounded-full opacity-10 animate-pulse-slow"></div>
       </div>
 
-      <div className="container mx-auto px-8 py-12 relative z-10 max-w-7xl">
-        {/* Text readability overlay */}
-        <div className="absolute inset-0 bg-white/20 backdrop-blur-sm rounded-lg"></div>
+      <div className="w-full px-8 py-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <div className="space-y-8">
 
