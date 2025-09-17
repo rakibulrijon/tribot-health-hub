@@ -67,7 +67,7 @@ const Hero = () => {
               <img 
                 src={emergencyCare} 
                 alt="AI-Powered Emergency Care Technology" 
-                className="w-full h-auto rounded-2xl shadow-hero"
+                className="w-4/5 h-auto rounded-2xl shadow-hero mx-auto"
               />
             </div>
             {/* Image Background Glow */}
