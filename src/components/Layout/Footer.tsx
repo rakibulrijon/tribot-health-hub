@@ -38,7 +38,7 @@ ${formData.comments}`;
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/src/assets/footer-background.png')`
+          backgroundImage: `url('/footer-background.png')`
         }}
       ></div>
       
