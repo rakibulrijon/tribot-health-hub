@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import tribotLogo from "@/assets/tribot-logo.png";
 
 const Header = () => {
@@ -6,30 +7,30 @@ const Header = () => {
     <header className="w-full bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <img src={tribotLogo} alt="Tribot" className="h-8 w-8" />
             <span className="text-xl font-bold text-foreground">Tribot</span>
-          </div>
+          </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
               HOME
-            </a>
-            <a href="#technology" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/technology" className="text-foreground hover:text-primary transition-colors font-medium">
               TECHNOLOGY
-            </a>
-            <a href="#applications" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/applications" className="text-foreground hover:text-primary transition-colors font-medium">
               APPLICATIONS
-            </a>
-            <a href="#research" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/research" className="text-foreground hover:text-primary transition-colors font-medium">
               RESEARCH
-            </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
               ABOUT
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
               CONTACT
-            </a>
+            </Link>
           </div>
 
           <Button variant="hero" className="hidden md:flex">
