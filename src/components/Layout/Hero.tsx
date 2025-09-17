@@ -37,6 +37,16 @@ const Hero = () => {
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
               Every second counts in the Emergency Department. Yet, for millions of linguistically diverse patients, language barriers delay care, increase risks, and worsen outcomes.
             </p>
+            
+            {/* Additional Context */}
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
+              TRIBOT is a conversational AI chatbot designed to bridge this gap. By combining cutting-edge AI with clinical expertise, TRIBOT enables real-time multilingual interpretation and clinically validated triage classification — ensuring safe, timely, and equitable care.
+            </p>
+            
+            {/* Vision Statement */}
+            <p className="text-lg text-primary font-medium max-w-lg">
+              Our vision: A world where language is never a barrier to urgent, life-saving healthcare.
+            </p>
 
             {/* CTA Button */}
             <div className="pt-4">
