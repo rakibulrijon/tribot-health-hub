@@ -1,48 +1,79 @@
+import React from 'react';
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import unswLogo from "@/assets/unsw-logo.png";
+import nhmrcLogo from "@/assets/nhmrc-logo.png";
+import swslhdLogo from "@/assets/swslhd-logo.webp";
+
 const Partners = () => {
   const partners = [
-    { name: "Queensland Health", logo: "QLD Health" },
-    { name: "Griffith University", logo: "GRIFFITH" },
-    { name: "Gold Coast Health", logo: "GC Health" },
-    { name: "Australian Government", logo: "AU GOV" },
-    { name: "Queensland Government", logo: "QLD GOV" },
-    { name: "Medical Research", logo: "MED RES" },
-    { name: "AI Institute", logo: "AI INST" },
-    { name: "Healthcare Innovation", logo: "HC INNOV" },
+    { name: "UNSW Sydney", logo: unswLogo },
+    { name: "NHMRC", logo: nhmrcLogo },
+    { name: "SWSLHD", logo: swslhdLogo },
+    { name: "Bankstown-Lidcombe Hospital", logo: "🏥" },
+    { name: "Westmead Hospital", logo: "🏥" },
+    { name: "Prince of Wales Hospital", logo: "🏥" },
+    { name: "NSW Health", logo: "⚕️" },
+    { name: "eHealth NSW", logo: "💻" },
   ];
 
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-16 bg-background border-t border-border">
       <div className="container mx-auto px-6">
-        {/* Partner Logos */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center justify-items-center">
-          {partners.map((partner, index) => (
-            <div 
-              key={index}
-              className="group relative p-4 rounded-lg hover:bg-background transition-all duration-300 cursor-pointer"
-            >
-              <div className="w-20 h-12 bg-muted rounded-md flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <span className="text-xs font-semibold text-muted-foreground group-hover:text-foreground transition-colors">
-                  {partner.logo}
-                </span>
-              </div>
-            </div>
-          ))}
+        <div className="text-center mb-12">
+          <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-8">
+            Our Partners & Collaborators
+          </h2>
         </div>
-
-        {/* Scrolling Animation for Mobile */}
-        <div className="mt-12 md:hidden">
-          <div className="flex space-x-8 animate-pulse">
-            {partners.slice(0, 4).map((partner, index) => (
+        
+        {/* Desktop Grid */}
+        <div className="hidden md:block">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center opacity-60 hover:opacity-80 transition-opacity">
+            {partners.map((partner, index) => (
               <div 
-                key={`mobile-${index}`}
-                className="flex-shrink-0 w-16 h-10 bg-muted rounded-md flex items-center justify-center"
+                key={index} 
+                className="flex flex-col items-center justify-center h-16"
               >
-                <span className="text-xs font-semibold text-muted-foreground">
-                  {partner.logo}
-                </span>
+                {typeof partner.logo === 'string' && (partner.logo.endsWith('.png') || partner.logo.endsWith('.webp')) ? (
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name}
+                    className="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all"
+                  />
+                ) : (
+                  <div className="text-2xl text-muted-foreground">{partner.logo}</div>
+                )}
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {partners.map((partner, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3">
+                  <div className="flex flex-col items-center justify-center h-16 opacity-60">
+                    {typeof partner.logo === 'string' && (partner.logo.endsWith('.png') || partner.logo.endsWith('.webp')) ? (
+                      <img 
+                        src={partner.logo} 
+                        alt={partner.name}
+                        className="max-h-10 max-w-full object-contain filter grayscale"
+                      />
+                    ) : (
+                      <div className="text-xl text-muted-foreground">{partner.logo}</div>
+                    )}
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </section>
