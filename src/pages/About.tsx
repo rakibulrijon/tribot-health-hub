@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import padmaImage from "@/assets/padma-narasimhan.jpg";
 import rayhanImage from "@/assets/rayhan-profile.jpg";
 import abdullahImage from "@/assets/abdullah-profile.jpg";
+import josephImage from "@/assets/joseph-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -44,7 +45,7 @@ const About = () => {
 
   const researchFellows = [
     { name: "Abdullah Masud", role: "AI/ML Research Fellow", image: abdullahImage, linkedin: "https://www.linkedin.com/in/abdullah-al-masud-27january1986/" },
-    { name: "Joseph Zu", role: "Data Science & Engineering" },
+    { name: "Joseph Zu", role: "Data Science & Engineering", image: josephImage, linkedin: "https://www.linkedin.com/in/zhujoseph/" },
     { name: "Md Abu Rayhan", role: "Digital Health Informatics", image: rayhanImage, linkedin: "https://www.linkedin.com/in/mdaburayhann/" }
   ];
 
