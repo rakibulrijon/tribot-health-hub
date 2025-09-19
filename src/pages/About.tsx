@@ -10,7 +10,7 @@ import aboutBackground from "@/assets/about-background.png";
 const About = () => {
   const founder = {
     name: "Dr Padmanesan Narasimhan (Padma)",
-    role: "Founder & Lead Investigator",
+    
     positions: [
       "Senior Lecturer & Lead, Digital Health & AI – UNSW Sydney",
       "Resident Medical Officer – Bankstown-Lidcombe Hospital"
