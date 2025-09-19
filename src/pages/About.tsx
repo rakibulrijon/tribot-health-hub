@@ -72,9 +72,6 @@ const About = () => {
           }}
         >
           <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-black drop-shadow-sm animate-fade-in">
-              Founder & Lead Investigator
-            </h2>
             <div className="max-w-4xl mx-auto">
               <Card className="border-0 shadow-2xl hover:shadow-hero transition-all duration-500 animate-scale-in bg-white/95 backdrop-blur-sm">
                 <CardContent className="p-6 sm:p-8">
@@ -89,7 +86,7 @@ const About = () => {
                     </div>
                     <div className="flex-grow text-center md:text-left">
                       <div className="flex items-center justify-center gap-3 mb-2">
-                        <h3 className="text-2xl font-bold text-foreground">{founder.name.trim()}</h3>
+                        <h3 className="text-2xl font-bold text-foreground">Dr Padmanesan Narasimhan (Padma)</h3>
                         <button
                           onClick={() => window.open("https://www.linkedin.com/in/padmanesan-narasimhan-b2664734/", "_blank")}
                           className="bg-[#0077B5] text-white p-2 rounded-full hover:bg-[#005885] transition-colors duration-300 hover:scale-110 transform"
