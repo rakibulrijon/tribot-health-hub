@@ -60,7 +60,7 @@ const About = () => {
 
         {/* Founder Section */}
         <section 
-          className="py-12 sm:py-20 relative overflow-hidden"
+          className="pt-0 pb-12 sm:pb-20 relative overflow-hidden"
           style={{
             backgroundImage: `url(${aboutBackground})`,
             backgroundSize: 'cover',
@@ -68,10 +68,7 @@ const About = () => {
             backgroundRepeat: 'no-repeat'
           }}
         >
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/20"></div>
-          
-          <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-12 sm:pt-20">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white drop-shadow-lg animate-fade-in">
               Founder & Lead Investigator
             </h2>
