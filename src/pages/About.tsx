@@ -100,7 +100,7 @@ const About = () => {
                           </svg>
                         </button>
                       </div>
-                      <p className="text-primary font-semibold text-lg mb-4">{founder.role}</p>
+                      
                       <div className="space-y-2 mb-6">
                         {founder.positions.map((position, index) => (
                           <p key={index} className="text-muted-foreground font-medium text-sm sm:text-base">{position}</p>
