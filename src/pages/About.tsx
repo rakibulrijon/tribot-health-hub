@@ -54,13 +54,13 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="py-20">
+      <main>
         {/* Hero Section */}
         
 
         {/* Founder Section */}
         <section 
-          className="pt-0 pb-12 sm:pb-20 relative overflow-hidden"
+          className="relative overflow-hidden"
           style={{
             backgroundImage: `url(${aboutBackground})`,
             backgroundSize: 'cover',
@@ -68,8 +68,8 @@ const About = () => {
             backgroundRepeat: 'no-repeat'
           }}
         >
-          <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-12 sm:pt-20">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white drop-shadow-lg animate-fade-in">
+          <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-black drop-shadow-sm animate-fade-in">
               Founder & Lead Investigator
             </h2>
             <div className="max-w-4xl mx-auto">
