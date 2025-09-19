@@ -54,30 +54,21 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="p-0 m-0">
-        <section
-          className="relative flex flex-col items-center justify-start"
-          style={{
-            backgroundImage: `url(${aboutBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            minHeight: "100vh",
-            paddingTop: "1.5rem",
-          }}
-        >
-          <div className="container mx-auto px-6 flex flex-col items-center justify-start">
-            <div className="max-w-4xl w-full flex justify-center mt-0">
-              <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-500 animate-scale-in w-full flex justify-center">
-                <CardContent className="p-8 flex flex-col items-center">
-                  <h2 className="text-3xl font-bold text-center mb-8 text-foreground animate-fade-in">
-                    Founder & Lead Investigator
-                  </h2>
-                  <div
-                    className="flex flex-col md:flex-row items-center md:items-center space-y-6 md:space-y-0 md:space-x-8 w-full justify-center"
-                    style={{ marginTop: "40px" }} // Increased margin-top to add more space above Padma's profile
-                  >
-                    <div className="flex-shrink-0 flex justify-center">
+      <main className="py-20">
+        {/* Hero Section */}
+        
+
+        {/* Founder Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold text-center mb-12 text-foreground animate-fade-in">
+              Founder & Lead Investigator
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-500 animate-scale-in">
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <div className="flex-shrink-0">
                       <img 
                         src={founder.image} 
                         alt={founder.name}
@@ -114,8 +105,8 @@ const About = () => {
         </section>
 
         {/* Team Sections */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-6">
+        <section className="py-12 sm:py-20 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6">
             {/* Chief Investigators */}
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-center mb-8 text-foreground animate-fade-in">
