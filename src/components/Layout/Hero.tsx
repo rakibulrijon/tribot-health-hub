@@ -1,6 +1,9 @@
-import emergencyCare from "@/assets/emergency-triage.jpg";
+import emergencyRoom from "@/assets/emergency-room.jpg";
+import patientCare from "@/assets/patient-care.jpg";
 import heroBackground from "@/assets/hero-background.png";
 import PrototypeAccessForm from "./PrototypeAccessForm";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Hero = () => {
   return (
@@ -56,14 +59,40 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image Slideshow */}
           <div className="relative">
             <div className="relative z-10">
-              <img 
-                src={emergencyCare} 
-                alt="AI-Powered Emergency Care Technology" 
-                className="w-4/5 h-auto rounded-2xl shadow-hero mx-auto"
-              />
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 4000,
+                  }),
+                ]}
+                className="w-4/5 mx-auto"
+              >
+                <CarouselContent>
+                  <CarouselItem>
+                    <img 
+                      src={emergencyRoom} 
+                      alt="Emergency Department - Medical professionals providing urgent care" 
+                      className="w-full h-auto rounded-2xl shadow-hero"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img 
+                      src={patientCare} 
+                      alt="Patient Care - Healthcare team assisting patients with AI technology" 
+                      className="w-full h-auto rounded-2xl shadow-hero"
+                    />
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="hidden lg:flex" />
+                <CarouselNext className="hidden lg:flex" />
+              </Carousel>
             </div>
             {/* Image Background Glow */}
             <div className="absolute inset-0 bg-gradient-hero rounded-2xl blur-3xl opacity-20 scale-110"></div>
