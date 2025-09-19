@@ -55,13 +55,7 @@ const About = () => {
       <Header />
       <main className="py-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-subtle">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 animate-fade-in">
-              <span className="text-foreground">About</span>
-            </h1>
-          </div>
-        </section>
+        
 
         {/* Founder Section */}
         <section className="py-20">
