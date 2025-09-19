@@ -89,7 +89,7 @@ const About = () => {
                     </div>
                     <div className="flex-grow text-center md:text-left">
                       <div className="flex items-center justify-center gap-3 mb-2">
-                        <h3 className="text-2xl font-bold text-foreground">{founder.name}</h3>
+                        <h3 className="text-2xl font-bold text-foreground">{founder.name.trim()}</h3>
                         <button
                           onClick={() => window.open("https://www.linkedin.com/in/padmanesan-narasimhan-b2664734/", "_blank")}
                           className="bg-[#0077B5] text-white p-2 rounded-full hover:bg-[#005885] transition-colors duration-300 hover:scale-110 transform"
