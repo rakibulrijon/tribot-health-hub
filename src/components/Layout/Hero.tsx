@@ -1,5 +1,6 @@
 import emergencyRoom from "@/assets/emergency-room.jpg";
 import patientCare from "@/assets/patient-care.jpg";
+import emergencyCare from "@/assets/emergency-triage.jpg";
 import heroBackground from "@/assets/hero-background.png";
 import PrototypeAccessForm from "./PrototypeAccessForm";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -86,6 +87,13 @@ const Hero = () => {
                     <img 
                       src={patientCare} 
                       alt="Patient Care - Healthcare team assisting patients with AI technology" 
+                      className="w-full h-auto rounded-2xl shadow-hero"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img 
+                      src={emergencyCare} 
+                      alt="AI-Powered Emergency Care Technology" 
                       className="w-full h-auto rounded-2xl shadow-hero"
                     />
                   </CarouselItem>
