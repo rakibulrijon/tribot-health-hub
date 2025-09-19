@@ -17,17 +17,18 @@ const About = () => {
       "Resident Medical Officer – Bankstown-Lidcombe Hospital"
     ],
     bio: "Dr Narasimhan is a WHO-recognised expert in AI and Digital Health, with a strong track record in epidemiology, health systems, and emergency medicine. He has led multimillion-dollar digital health projects, including TRIBOT and the EPIWATCH AI-based epidemic preparedness platform.",
-    image: padmaImage
+    image: padmaImage,
+    unsw: "https://www.unsw.edu.au/staff/padmanesan-narasimhan"
   };
 
   const chiefInvestigators = [
-    { name: "Assoc Prof Roberto Forero", affiliation: "UNSW" },
+    { name: "Assoc Prof Roberto Forero", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/roberto-forero" },
     { name: "Dr Aditya Joshi", affiliation: "UNSW", image: adityaImage, linkedin: "https://www.linkedin.com/in/aditya-joshi-phd/", unsw: "https://www.unsw.edu.au/staff/aditya-joshi" },
-    { name: "Prof Sandra Hale", affiliation: "UNSW" },
-    { name: "Dr Jitendra Jonnagaddala", affiliation: "UNSW" },
-    { name: "Assoc Prof Usman Iqbal", affiliation: "UNSW" },
-    { name: "Dr Mohammed Mohsin", affiliation: "Liverpool Hospital" },
-    { name: "Dr Anthony Sunjaya", affiliation: "UNSW" },
+    { name: "Prof Sandra Hale", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/sandra-hale" },
+    { name: "Dr Jitendra Jonnagaddala", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/jitendra-jonnagaddala" },
+    { name: "Assoc Prof Usman Iqbal", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/usman-iqbal" },
+    { name: "Dr Mohammed Mohsin", affiliation: "Liverpool Hospital", unsw: "https://www.unsw.edu.au/staff/mohammed-mohsin" },
+    { name: "Dr Anthony Sunjaya", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/anthony-sunjaya" },
     { name: "Assoc Prof Sally McCarthy", affiliation: "UNSW" },
     { name: "Dr Matthew Smith", affiliation: "Bankstown Lidcombe Hospital" }
   ];
@@ -77,7 +78,10 @@ const About = () => {
               Founder & Lead Investigator
             </h2>
             <div className="max-w-4xl mx-auto">
-              <Card className="border-0 shadow-2xl hover:shadow-hero transition-all duration-500 animate-scale-in bg-white/95 backdrop-blur-sm">
+              <Card 
+                className="border-0 shadow-2xl hover:shadow-hero transition-all duration-500 animate-scale-in bg-white/95 backdrop-blur-sm cursor-pointer"
+                onClick={() => window.open(founder.unsw, "_blank")}
+              >
                 <CardContent className="p-6 sm:p-8">
                   <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
                     <div className="flex-shrink-0">
@@ -92,7 +96,10 @@ const About = () => {
                       <div className="flex items-center justify-center gap-3 mb-2">
                         <h3 className="text-2xl font-bold text-foreground">{founder.name.trim()}</h3>
                         <button
-                          onClick={() => window.open("https://www.linkedin.com/in/padmanesan-narasimhan-b2664734/", "_blank")}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            window.open("https://www.linkedin.com/in/padmanesan-narasimhan-b2664734/", "_blank");
+                          }}
                           className="bg-[#0077B5] text-white p-2 rounded-full hover:bg-[#005885] transition-colors duration-300 hover:scale-110 transform"
                           aria-label="Visit LinkedIn Profile"
                         >
