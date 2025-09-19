@@ -28,7 +28,7 @@ Email: ${formData.email}
 Comments:
 ${formData.comments}`;
 
-    const mailtoUrl = `mailto:cont.rayhan@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoUrl = `mailto:abdullah.masud@unsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoUrl;
   };
 
