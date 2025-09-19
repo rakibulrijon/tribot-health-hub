@@ -58,8 +58,8 @@ const About = () => {
         
 
         {/* Founder Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
+        <section className="py-12 sm:py-20">
+          <div className="container mx-auto px-4 sm:px-6">
             <h2 className="text-3xl font-bold text-center mb-12 text-foreground animate-fade-in">
               Founder & Lead Investigator
             </h2>
@@ -104,8 +104,8 @@ const About = () => {
         </section>
 
         {/* Team Sections */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-6">
+        <section className="py-12 sm:py-20 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6">
             {/* Chief Investigators */}
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-center mb-8 text-foreground animate-fade-in">

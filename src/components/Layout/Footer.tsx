@@ -45,8 +45,8 @@ ${formData.comments}`;
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-purple-900/30"></div>
 
-      <div className="relative z-10 container mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-2 gap-16">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -91,7 +91,7 @@ ${formData.comments}`;
             <p className="text-purple-100 mb-6">* indicates required fields</p>
             
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium mb-2 block">Name</label>
                   <Input
@@ -116,7 +116,7 @@ ${formData.comments}`;
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium mb-2 block">Email *</label>
                   <Input
