@@ -77,7 +77,7 @@ const About = () => {
                       <img 
                         src={founder.image} 
                         alt={founder.name}
-                        className="w-32 h-32 rounded-full object-cover shadow-hero animate-float cursor-pointer transition-transform duration-300 group-hover:scale-105"
+                        className="w-32 h-32 rounded-full object-cover object-top shadow-hero animate-float cursor-pointer transition-transform duration-300 group-hover:scale-105"
                         onClick={() => window.open("https://www.linkedin.com/in/padmanesan-narasimhan-b2664734/", "_blank")}
                       />
                       <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-300"></div>
