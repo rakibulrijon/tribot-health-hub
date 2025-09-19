@@ -178,7 +178,7 @@ const About = () => {
                           <img 
                             src={fellow.image} 
                             alt={fellow.name}
-                            className="w-16 h-16 rounded-full object-cover object-center shadow-card"
+                            className="w-24 h-24 rounded-full object-cover object-center shadow-card"
                           />
                         </div>
                       )}
