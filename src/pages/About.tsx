@@ -2,6 +2,7 @@ import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import padmaImage from "@/assets/padma-narasimhan.jpg";
+import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
   const founder = {
@@ -58,14 +59,25 @@ const About = () => {
         
 
         {/* Founder Section */}
-        <section className="py-12 sm:py-20">
-          <div className="container mx-auto px-4 sm:px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-foreground animate-fade-in">
+        <section 
+          className="py-12 sm:py-20 relative overflow-hidden"
+          style={{
+            backgroundImage: `url(${aboutBackground})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
+          
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white drop-shadow-lg animate-fade-in">
               Founder & Lead Investigator
             </h2>
             <div className="max-w-4xl mx-auto">
-              <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-500 animate-scale-in">
-                <CardContent className="p-8">
+              <Card className="border-0 shadow-2xl hover:shadow-hero transition-all duration-500 animate-scale-in bg-white/95 backdrop-blur-sm">
+                <CardContent className="p-6 sm:p-8">
                   <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
                     <div className="flex-shrink-0">
                       <img 
@@ -88,13 +100,13 @@ const About = () => {
                           </svg>
                         </button>
                       </div>
-                      <p className="text-primary font-semibold mb-4">{founder.role}</p>
-                      <div className="space-y-1 mb-4">
+                      <p className="text-primary font-semibold text-lg mb-4">{founder.role}</p>
+                      <div className="space-y-2 mb-6">
                         {founder.positions.map((position, index) => (
-                          <p key={index} className="text-muted-foreground font-medium">{position}</p>
+                          <p key={index} className="text-muted-foreground font-medium text-sm sm:text-base">{position}</p>
                         ))}
                       </div>
-                      <p className="text-muted-foreground leading-relaxed">{founder.bio}</p>
+                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{founder.bio}</p>
                     </div>
                   </div>
                 </CardContent>
