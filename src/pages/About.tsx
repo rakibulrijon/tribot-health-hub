@@ -42,7 +42,7 @@ const About = () => {
   const researchFellows = [
     { name: "Abdullah Masud", role: "AI/ML Research Fellow" },
     { name: "Joseph Zu", role: "Data Science & Engineering" },
-    { name: "Md Abu Rayhan", role: "Digital Health Informatics" }
+    { name: "MD Abu Rayhan", role: "Digital Health Informatics" }
   ];
 
   const researchStudents = [
