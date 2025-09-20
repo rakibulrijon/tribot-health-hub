@@ -15,6 +15,7 @@ import sallyImage from "@/assets/sally-mccarthy-profile.jpg";
 import anthonyImage from "@/assets/anthony-sunjaya-profile.jpg";
 import matthewImage from "@/assets/matthew-smith-profile.jpg";
 import hollyImage from "@/assets/holly-seale-profile.jpg";
+import andrewImage from "@/assets/andrew-coggins-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -44,7 +45,7 @@ const About = () => {
 
   const associateInvestigators = [
     { name: "Ms Fang (Sam) Shen", affiliation: "SWSLHD" },
-    { name: "Assoc Prof Andrew Coggins", affiliation: "Westmead Hospital" },
+    { name: "Assoc Prof Andrew Coggins", affiliation: "Westmead Hospital", image: andrewImage },
     { name: "Wayne Varndell", affiliation: "Prince of Wales Hospital" },
     { name: "Dr Benjamin Harris-Roxas", affiliation: "UNSW" },
     { name: "Assoc Prof Holly Seale", affiliation: "UNSW", image: hollyImage },
