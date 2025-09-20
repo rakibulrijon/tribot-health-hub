@@ -10,10 +10,6 @@ import robertoImage from "@/assets/roberto-forero-profile.jpg";
 import sandraImage from "@/assets/sandra-hale-profile.jpg";
 import jitendraImage from "@/assets/jitendra-jonnagaddala-profile.jpg";
 import usmanImage from "@/assets/usman-iqbal-profile.jpg";
-import mohammedImage from "@/assets/mohammed-mohsin-profile.jpg";
-import anthonyImage from "@/assets/anthony-sunjaya-profile.jpg";
-import sallyImage from "@/assets/sally-mccarthy-profile.jpg";
-import dipankarImage from "@/assets/dipankar-srirag-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -35,9 +31,9 @@ const About = () => {
     { name: "Prof Sandra Hale", affiliation: "UNSW", image: sandraImage, unsw: "https://www.unsw.edu.au/staff/sandra-hale" },
     { name: "Dr Jitendra Jonnagaddala", affiliation: "UNSW", image: jitendraImage, unsw: "https://www.unsw.edu.au/staff/jitendra-jonnagaddala" },
     { name: "Assoc Prof Usman Iqbal", affiliation: "UNSW", image: usmanImage, unsw: "https://www.unsw.edu.au/staff/usman-iqbal" },
-    { name: "Dr Mohammed Mohsin", affiliation: "Liverpool Hospital", image: mohammedImage, unsw: "https://www.unsw.edu.au/staff/mohammed-mohsin" },
-    { name: "Dr Anthony Sunjaya", affiliation: "UNSW", image: anthonyImage, unsw: "https://www.unsw.edu.au/staff/anthony-sunjaya" },
-    { name: "Assoc Prof Sally McCarthy", affiliation: "UNSW", image: sallyImage },
+    { name: "Dr Mohammed Mohsin", affiliation: "Liverpool Hospital", unsw: "https://www.unsw.edu.au/staff/mohammed-mohsin" },
+    { name: "Dr Anthony Sunjaya", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/anthony-sunjaya" },
+    { name: "Assoc Prof Sally McCarthy", affiliation: "UNSW" },
     { name: "Dr Matthew Smith", affiliation: "Bankstown Lidcombe Hospital" }
   ];
 
@@ -61,7 +57,7 @@ const About = () => {
 
   const researchStudents = [
     { name: "Paul Nguyen", role: "PhD Candidate (Digital Health & AI)" },
-    { name: "Dipankar Srirag", role: "PhD Candidate (AI & Healthcare Innovation)", image: dipankarImage }
+    { name: "Dipankar Srirag", role: "PhD Candidate (AI & Healthcare Innovation)" }
   ];
 
   return (
@@ -259,19 +255,10 @@ const About = () => {
                     className="border-0 shadow-card hover:shadow-hero hover-scale transition-all duration-300 animate-fade-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                   <CardContent className="p-4 text-center">
-                     {student.image && (
-                       <div className="flex justify-center mb-3">
-                         <img 
-                           src={student.image} 
-                           alt={student.name}
-                           className="w-20 h-20 rounded-full object-cover object-top shadow-card"
-                         />
-                       </div>
-                     )}
-                     <h3 className="font-semibold text-foreground">{student.name}</h3>
-                     <p className="text-sm text-primary">{student.role}</p>
-                   </CardContent>
+                    <CardContent className="p-4 text-center">
+                      <h3 className="font-semibold text-foreground">{student.name}</h3>
+                      <p className="text-sm text-primary">{student.role}</p>
+                    </CardContent>
                   </Card>
                 ))}
               </div>
