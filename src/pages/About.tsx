@@ -203,7 +203,7 @@ const About = () => {
                            <img 
                              src={ai.image} 
                              alt={ai.name}
-                             className={`w-20 h-20 rounded-full shadow-card ${ai.name.includes('Andrew') ? 'object-cover object-center' : 'object-cover object-top'}`}
+                             className={`w-20 h-20 rounded-full shadow-card ${ai.name.includes('Andrew') ? 'object-cover object-[center_20%]' : 'object-cover object-top'}`}
                            />
                         </div>
                       )}
