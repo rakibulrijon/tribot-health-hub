@@ -45,7 +45,7 @@ const About = () => {
 
   const associateInvestigators = [
     { name: "Ms Fang (Sam) Shen", affiliation: "SWSLHD" },
-    { name: "Assoc Prof Andrew Coggins", affiliation: "Westmead Hospital", image: andrewImage },
+    { name: "Assoc Prof Andrew Coggins", affiliation: "Westmead Hospital", image: andrewImage, sydney: "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/andrew-coggins.html" },
     { name: "Wayne Varndell", affiliation: "Prince of Wales Hospital" },
     { name: "Dr Benjamin Harris-Roxas", affiliation: "UNSW" },
     { name: "Assoc Prof Holly Seale", affiliation: "UNSW", image: hollyImage },
@@ -191,19 +191,20 @@ const About = () => {
                 Associate Investigators (AIs)
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-                {associateInvestigators.map((ai, index) => (
-                  <Card 
-                    key={index} 
-                    className="border-0 shadow-card hover:shadow-hero hover-scale transition-all duration-300 animate-fade-in"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
+                 {associateInvestigators.map((ai, index) => (
+                   <Card 
+                     key={index} 
+                     className={`border-0 shadow-card hover:shadow-hero hover-scale transition-all duration-300 animate-fade-in ${ai.sydney ? 'cursor-pointer' : ''}`}
+                     style={{ animationDelay: `${index * 100}ms` }}
+                     onClick={ai.sydney ? () => window.open(ai.sydney, "_blank") : undefined}
+                   >
                     <CardContent className="p-4 text-center">
                       {ai.image && (
                         <div className="flex justify-center mb-3">
                            <img 
                              src={ai.image} 
                              alt={ai.name}
-                             className={`w-20 h-20 rounded-full shadow-card ${ai.name.includes('Andrew') ? 'object-cover object-[center_20%]' : 'object-cover object-top'}`}
+                             className="w-20 h-20 rounded-full object-cover object-top shadow-card"
                            />
                         </div>
                       )}
