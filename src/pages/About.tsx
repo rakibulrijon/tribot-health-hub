@@ -40,7 +40,7 @@ const About = () => {
     { name: "Dr Mohammed Mohsin", affiliation: "Liverpool Hospital", image: mohsinImage, unsw: "https://www.unsw.edu.au/staff/mohammed-mohsin" },
     { name: "Dr Anthony Sunjaya", affiliation: "UNSW", image: anthonyImage, unsw: "https://www.unsw.edu.au/staff/anthony-sunjaya" },
     { name: "Assoc Prof Sally McCarthy", affiliation: "UNSW", image: sallyImage },
-    { name: "Dr Matthew Smith", affiliation: "Bankstown Lidcombe Hospital", image: matthewImage }
+    { name: "Dr Matthew Smith", affiliation: "Bankstown Lidcombe Hospital", image: matthewImage, sydney: "https://www.sydney.edu.au/arts/about/our-people/academic-staff/matthew-smith.html" }
   ];
 
   const associateInvestigators = [
@@ -143,11 +143,11 @@ const About = () => {
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
                 {chiefInvestigators.map((ci, index) => (
-                  <Card 
-                    key={index} 
-                    className={`border-0 shadow-card hover:shadow-hero hover-scale transition-all duration-300 animate-fade-in ${ci.unsw ? 'cursor-pointer' : ''}`}
-                    style={{ animationDelay: `${index * 100}ms` }}
-                    onClick={ci.unsw ? () => window.open(ci.unsw, "_blank") : undefined}
+                   <Card 
+                     key={index} 
+                     className={`border-0 shadow-card hover:shadow-hero hover-scale transition-all duration-300 animate-fade-in ${ci.unsw || ci.sydney ? 'cursor-pointer' : ''}`}
+                     style={{ animationDelay: `${index * 100}ms` }}
+                     onClick={(ci.unsw || ci.sydney) ? () => window.open(ci.unsw || ci.sydney, "_blank") : undefined}
                   >
                     <CardContent className="p-4 text-center">
                       {ci.image && (
