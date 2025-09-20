@@ -16,6 +16,7 @@ import anthonyImage from "@/assets/anthony-sunjaya-profile.jpg";
 import matthewImage from "@/assets/matthew-smith-profile.jpg";
 import hollyImage from "@/assets/holly-seale-profile.jpg";
 import andrewImage from "@/assets/andrew-coggins-profile.jpg";
+import fangImage from "@/assets/fang-shen-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -44,7 +45,7 @@ const About = () => {
   ];
 
   const associateInvestigators = [
-    { name: "Ms Fang (Sam) Shen", affiliation: "SWSLHD" },
+    { name: "Ms Fang (Sam) Shen", affiliation: "SWSLHD", image: fangImage },
     { name: "Assoc Prof Andrew Coggins", affiliation: "Westmead Hospital", image: andrewImage, sydney: "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/andrew-coggins.html" },
     { name: "Wayne Varndell", affiliation: "Prince of Wales Hospital" },
     { name: "Dr Benjamin Harris-Roxas", affiliation: "UNSW" },
