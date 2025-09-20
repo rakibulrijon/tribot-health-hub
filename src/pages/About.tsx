@@ -13,6 +13,7 @@ import usmanImage from "@/assets/usman-iqbal-profile.jpg";
 import mohsinImage from "@/assets/mohammed-mohsin-profile.jpg";
 import sallyImage from "@/assets/sally-mccarthy-profile.jpg";
 import anthonyImage from "@/assets/anthony-sunjaya-profile.jpg";
+import matthewImage from "@/assets/matthew-smith-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -37,7 +38,7 @@ const About = () => {
     { name: "Dr Mohammed Mohsin", affiliation: "Liverpool Hospital", image: mohsinImage, unsw: "https://www.unsw.edu.au/staff/mohammed-mohsin" },
     { name: "Dr Anthony Sunjaya", affiliation: "UNSW", image: anthonyImage, unsw: "https://www.unsw.edu.au/staff/anthony-sunjaya" },
     { name: "Assoc Prof Sally McCarthy", affiliation: "UNSW", image: sallyImage },
-    { name: "Dr Matthew Smith", affiliation: "Bankstown Lidcombe Hospital" }
+    { name: "Dr Matthew Smith", affiliation: "Bankstown Lidcombe Hospital", image: matthewImage }
   ];
 
   const associateInvestigators = [
