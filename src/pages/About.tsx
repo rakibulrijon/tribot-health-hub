@@ -12,6 +12,7 @@ import jitendraImage from "@/assets/jitendra-jonnagaddala-profile.jpg";
 import usmanImage from "@/assets/usman-iqbal-profile.jpg";
 import mohsinImage from "@/assets/mohammed-mohsin-profile.jpg";
 import sallyImage from "@/assets/sally-mccarthy-profile.jpg";
+import anthonyImage from "@/assets/anthony-sunjaya-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -34,7 +35,7 @@ const About = () => {
     { name: "Dr Jitendra Jonnagaddala", affiliation: "UNSW", image: jitendraImage, unsw: "https://www.unsw.edu.au/staff/jitendra-jonnagaddala" },
     { name: "Assoc Prof Usman Iqbal", affiliation: "UNSW", image: usmanImage, unsw: "https://www.unsw.edu.au/staff/usman-iqbal" },
     { name: "Dr Mohammed Mohsin", affiliation: "Liverpool Hospital", image: mohsinImage, unsw: "https://www.unsw.edu.au/staff/mohammed-mohsin" },
-    { name: "Dr Anthony Sunjaya", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/anthony-sunjaya" },
+    { name: "Dr Anthony Sunjaya", affiliation: "UNSW", image: anthonyImage, unsw: "https://www.unsw.edu.au/staff/anthony-sunjaya" },
     { name: "Assoc Prof Sally McCarthy", affiliation: "UNSW", image: sallyImage },
     { name: "Dr Matthew Smith", affiliation: "Bankstown Lidcombe Hospital" }
   ];
