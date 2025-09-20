@@ -6,6 +6,7 @@ import rayhanImage from "@/assets/rayhan-profile.jpg";
 import abdullahImage from "@/assets/abdullah-profile.jpg";
 import josephImage from "@/assets/joseph-profile.jpg";
 import adityaImage from "@/assets/aditya-joshi-profile.jpg";
+import robertoImage from "@/assets/roberto-forero-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -22,7 +23,7 @@ const About = () => {
   };
 
   const chiefInvestigators = [
-    { name: "Assoc Prof Roberto Forero", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/roberto-forero" },
+    { name: "Assoc Prof Roberto Forero", affiliation: "UNSW", image: robertoImage, unsw: "https://www.unsw.edu.au/staff/roberto-forero" },
     { name: "Dr Aditya Joshi", affiliation: "UNSW", image: adityaImage, linkedin: "https://www.linkedin.com/in/aditya-joshi-phd/", unsw: "https://www.unsw.edu.au/staff/aditya-joshi" },
     { name: "Prof Sandra Hale", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/sandra-hale" },
     { name: "Dr Jitendra Jonnagaddala", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/jitendra-jonnagaddala" },
