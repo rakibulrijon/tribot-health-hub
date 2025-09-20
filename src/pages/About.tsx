@@ -9,6 +9,7 @@ import adityaImage from "@/assets/aditya-joshi-profile.jpg";
 import robertoImage from "@/assets/roberto-forero-profile.jpg";
 import sandraImage from "@/assets/sandra-hale-profile.jpg";
 import jitendraImage from "@/assets/jitendra-jonnagaddala-profile.jpg";
+import usmanImage from "@/assets/usman-iqbal-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -29,7 +30,7 @@ const About = () => {
     { name: "Dr Aditya Joshi", affiliation: "UNSW", image: adityaImage, linkedin: "https://www.linkedin.com/in/aditya-joshi-phd/", unsw: "https://www.unsw.edu.au/staff/aditya-joshi" },
     { name: "Prof Sandra Hale", affiliation: "UNSW", image: sandraImage, unsw: "https://www.unsw.edu.au/staff/sandra-hale" },
     { name: "Dr Jitendra Jonnagaddala", affiliation: "UNSW", image: jitendraImage, unsw: "https://www.unsw.edu.au/staff/jitendra-jonnagaddala" },
-    { name: "Assoc Prof Usman Iqbal", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/usman-iqbal" },
+    { name: "Assoc Prof Usman Iqbal", affiliation: "UNSW", image: usmanImage, unsw: "https://www.unsw.edu.au/staff/usman-iqbal" },
     { name: "Dr Mohammed Mohsin", affiliation: "Liverpool Hospital", unsw: "https://www.unsw.edu.au/staff/mohammed-mohsin" },
     { name: "Dr Anthony Sunjaya", affiliation: "UNSW", unsw: "https://www.unsw.edu.au/staff/anthony-sunjaya" },
     { name: "Assoc Prof Sally McCarthy", affiliation: "UNSW" },
