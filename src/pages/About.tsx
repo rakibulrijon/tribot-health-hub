@@ -143,11 +143,11 @@ const About = () => {
                     <CardContent className="p-4 text-center">
                       {ci.image && (
                         <div className="flex justify-center mb-3">
-                          <img 
-                            src={ci.image} 
-                            alt={ci.name}
-                            className="w-20 h-20 rounded-full object-cover object-center shadow-card"
-                          />
+                           <img 
+                             src={ci.image} 
+                             alt={ci.name}
+                             className="w-20 h-20 rounded-full object-cover object-top shadow-card"
+                           />
                         </div>
                       )}
                       <div className="flex items-center justify-center gap-2 mb-2">
