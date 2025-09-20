@@ -14,6 +14,7 @@ import mohsinImage from "@/assets/mohammed-mohsin-profile.jpg";
 import sallyImage from "@/assets/sally-mccarthy-profile.jpg";
 import anthonyImage from "@/assets/anthony-sunjaya-profile.jpg";
 import matthewImage from "@/assets/matthew-smith-profile.jpg";
+import hollyImage from "@/assets/holly-seale-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -46,7 +47,7 @@ const About = () => {
     { name: "Assoc Prof Andrew Coggins", affiliation: "Westmead Hospital" },
     { name: "Wayne Varndell", affiliation: "Prince of Wales Hospital" },
     { name: "Dr Benjamin Harris-Roxas", affiliation: "UNSW" },
-    { name: "Assoc Prof Holly Seale", affiliation: "UNSW" },
+    { name: "Assoc Prof Holly Seale", affiliation: "UNSW", image: hollyImage },
     { name: "Dr Chi Ho Chan", affiliation: "UNSW" },
     { name: "Dr Quoc Dung Nguyen", affiliation: "UNSW" },
     { name: "Mrs Brynn Quick", affiliation: "Macquarie University" },
@@ -196,6 +197,15 @@ const About = () => {
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <CardContent className="p-4 text-center">
+                      {ai.image && (
+                        <div className="flex justify-center mb-3">
+                           <img 
+                             src={ai.image} 
+                             alt={ai.name}
+                             className="w-20 h-20 rounded-full object-cover object-top shadow-card"
+                           />
+                        </div>
+                      )}
                       <h3 className="font-semibold text-foreground">{ai.name}</h3>
                       <p className="text-sm text-primary">{ai.affiliation}</p>
                     </CardContent>
