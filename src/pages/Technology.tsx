@@ -56,10 +56,11 @@ const Technology = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="py-20">
+      <main className="relative" style={{ backgroundImage: `url(${technologyHeroBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+        <div className="absolute inset-0 bg-background/20"></div>
+        
         {/* Hero Section */}
-        <section className="py-20 relative bg-gradient-subtle" style={{ backgroundImage: `url(${technologyHeroBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-          <div className="absolute inset-0 bg-background/20"></div>
+        <section className="py-20 relative">
           <div className="container mx-auto px-6 text-center relative z-10">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               <span className="text-foreground">Where AI Meets</span>
@@ -73,7 +74,7 @@ const Technology = () => {
         </section>
 
         {/* Technology Cards */}
-        <section className="py-20">
+        <section className="py-20 relative z-10">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {technologies.map((tech, index) => (
@@ -92,7 +93,7 @@ const Technology = () => {
             </div>
             
             {/* Context-Aware Clinical Assistant */}
-            <div className="max-w-4xl mx-auto mt-16 text-center">
+            <div className="max-w-4xl mx-auto mt-16 text-center relative z-10">
               <p className="text-xl text-muted-foreground leading-relaxed">
                 TRIBOT isn't just a translator — it's a <span className="text-primary font-semibold">context-aware clinical assistant</span> designed for the most high-stakes environment in healthcare.
               </p>
