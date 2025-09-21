@@ -69,7 +69,7 @@ const Research = () => {
                 <span className="bg-gradient-hero bg-clip-text text-transparent">Real-World Impact.</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                TRIBOT is not just an innovation — it is evidence-driven research designed to transform practice.
+                TRIBOT is not just an innovation but evidence-driven research designed to transform practice.
               </p>
             </div>
           </section>

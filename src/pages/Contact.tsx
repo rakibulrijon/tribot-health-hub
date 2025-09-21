@@ -62,7 +62,7 @@ const Contact = () => {
                     </div>
                     <div className="space-y-2">
                       <h3 className="font-semibold text-foreground">Opportunity</h3>
-                      <p className="text-muted-foreground">TRIBOT has global commercial potential — scalable to multiple languages, adaptable across EDs, hospitals, aged care, and telehealth.</p>
+                      <p className="text-muted-foreground">TRIBOT has global commercial potential, scalable to multiple languages, adaptable across EDs, hospitals, aged care, and telehealth.</p>
                     </div>
                   </div>
                   <div className="bg-muted/30 p-6 rounded-lg">

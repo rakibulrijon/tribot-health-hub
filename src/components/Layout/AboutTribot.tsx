@@ -20,7 +20,7 @@ const AboutTribot = () => {
               <p className="text-lg text-muted-foreground leading-relaxed text-center">
                 <span className="font-semibold text-foreground">TRIBOT</span> is a conversational AI chatbot designed to bridge this gap. By combining cutting-edge AI with clinical expertise, TRIBOT enables{" "}
                 <span className="font-semibold text-primary">real-time multilingual interpretation</span> and{" "}
-                <span className="font-semibold text-primary">clinically validated triage classification</span> — ensuring safe, timely, and equitable care.
+                <span className="font-semibold text-primary">clinically validated triage classification</span>, ensuring safe, timely, and equitable care.
               </p>
             </CardContent>
           </Card>

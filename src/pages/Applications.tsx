@@ -109,7 +109,7 @@ const Applications = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-xl text-muted-foreground leading-relaxed">
-                TRIBOT's future extends into <span className="text-primary font-semibold">wearables, home health monitoring, and multilingual patient education</span> — making it a foundation for next-generation digital health.
+                TRIBOT's future extends into <span className="text-primary font-semibold">wearables, home health monitoring, and multilingual patient education</span>, making it a foundation for next-generation digital health.
               </p>
             </div>
           </div>

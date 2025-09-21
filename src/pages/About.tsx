@@ -315,8 +315,7 @@ const About = () => {
                 Together, our team brings world-class expertise across{" "}
                 <span className="text-primary font-semibold bg-gradient-hero bg-clip-text text-transparent">
                   clinical medicine, AI engineering, linguistics, and health systems
-                </span>{" "}
-                — ensuring TRIBOT is both scientifically robust and socially impactful.
+                </span>, ensuring TRIBOT is both scientifically robust and socially impactful.
               </p>
             </div>
           </div>

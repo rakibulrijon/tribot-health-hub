@@ -46,7 +46,7 @@ const Hero = () => {
             
             {/* Additional Context */}
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl">
-              TRIBOT is a conversational AI chatbot designed to bridge this gap. By combining cutting-edge AI with clinical expertise, TRIBOT enables real-time multilingual interpretation and clinically validated triage classification — ensuring safe, timely, and equitable care.
+              TRIBOT is a conversational AI chatbot designed to bridge this gap. By combining cutting-edge AI with clinical expertise, TRIBOT enables real-time multilingual interpretation and clinically validated triage classification, ensuring safe, timely, and equitable care.
             </p>
             
             {/* Vision Statement */}

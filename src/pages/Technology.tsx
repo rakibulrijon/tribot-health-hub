@@ -95,7 +95,7 @@ const Technology = () => {
             {/* Context-Aware Clinical Assistant */}
             <div className="max-w-4xl mx-auto mt-16 text-center relative z-10">
               <p className="text-xl text-black leading-relaxed">
-                TRIBOT isn't just a translator — it's a <span className="text-black font-semibold">context-aware clinical assistant</span> designed for the most high-stakes environment in healthcare.
+                TRIBOT isn't just a translator. It's a <span className="text-black font-semibold">context-aware clinical assistant</span> designed for the most high-stakes environment in healthcare.
               </p>
             </div>
           </div>
