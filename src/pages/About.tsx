@@ -24,7 +24,7 @@ import benjaminImage from "@/assets/benjamin-harris-roxas-profile.jpg";
 import chiImage from "@/assets/chi-ho-chan-profile.jpg";
 import patrickImage from "@/assets/patrick-san-gabriel-profile.jpg";
 import brynnImage from "@/assets/brynn-quick-profile.jpg";
-import aboutBackground from "@/assets/about-background.png";
+import aboutBackground from "@/assets/about-background-gradient.png";
 
 const About = () => {
   const founder = {
