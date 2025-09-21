@@ -91,8 +91,8 @@ const About = () => {
         {/* Founder Section */}
         <section className="relative z-10">
           <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-foreground drop-shadow-sm animate-fade-in">
-              Founder & Lead Investigator
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 drop-shadow-sm animate-fade-in">
+              <span className="bg-gradient-hero bg-clip-text text-transparent">Founder & Lead Investigator</span>
             </h2>
             <div className="max-w-4xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
               <Card 
