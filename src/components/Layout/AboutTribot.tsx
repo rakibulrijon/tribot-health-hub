@@ -1,8 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
+import aboutBackground from "@/assets/about-background-new.png";
 
 const AboutTribot = () => {
   return (
-    <section className="py-20 bg-background">
+    <section 
+      className="py-20 bg-background relative"
+      style={{
+        backgroundImage: `url(${aboutBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* First Description Card */}
