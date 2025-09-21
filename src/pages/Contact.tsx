@@ -35,10 +35,12 @@ const Contact = () => {
           {/* Hero Section */}
           <section className="py-20">
             <div className="container mx-auto px-6 text-center">
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-                Partner with us to transform emergency care.
-              </p>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-8 animate-fade-in">
+                <span className="text-foreground">Partner with us to</span>
+                <br />
+                <span className="bg-gradient-hero bg-clip-text text-transparent">transform emergency care.</span>
+              </h1>
+              <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: '0.2s'}}>
                 Whether you are a researcher, health professional, investor, or student, we would love to hear from you.
               </p>
             </div>
