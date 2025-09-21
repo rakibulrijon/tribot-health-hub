@@ -28,40 +28,6 @@ const AboutTribot = () => {
             </CardContent>
           </Card>
 
-          {/* Key Features */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground">Multilingual AI</h3>
-                  <p className="text-muted-foreground">
-                    Real-time interpretation capabilities breaking down language barriers in emergency care.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground">Clinical Validation</h3>
-                  <p className="text-muted-foreground">
-                    Clinically validated triage classification ensuring accurate and safe patient prioritization.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </section>
