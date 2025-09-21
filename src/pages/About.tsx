@@ -23,6 +23,7 @@ import wayneImage from "@/assets/wayne-varndell-profile.jpg";
 import benjaminImage from "@/assets/benjamin-harris-roxas-profile.jpg";
 import chiImage from "@/assets/chi-ho-chan-profile.jpg";
 import patrickImage from "@/assets/patrick-san-gabriel-profile.jpg";
+import brynnImage from "@/assets/brynn-quick-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -58,7 +59,7 @@ const About = () => {
     { name: "Assoc Prof Holly Seale", affiliation: "UNSW", image: hollyImage },
     { name: "Dr Chi Ho Chan", affiliation: "UNSW", image: chiImage },
     { name: "Dr Quoc Dung Nguyen", affiliation: "UNSW" },
-    { name: "Mrs Brynn Quick", affiliation: "Macquarie University" },
+    { name: "Mrs Brynn Quick", affiliation: "Macquarie University", image: brynnImage, macquarie: "https://researchers.mq.edu.au/en/persons/brynn-quick" },
     { name: "Dr Patrick San Gabriel", affiliation: "eHealth NSW", image: patrickImage }
   ];
 
@@ -201,9 +202,9 @@ const About = () => {
                  {associateInvestigators.map((ai, index) => (
                    <Card 
                      key={index} 
-                     className={`border-0 shadow-card hover:shadow-hero hover-scale transition-all duration-300 animate-fade-in ${ai.sydney ? 'cursor-pointer' : ''}`}
+                     className={`border-0 shadow-card hover:shadow-hero hover-scale transition-all duration-300 animate-fade-in ${ai.sydney || ai.macquarie ? 'cursor-pointer' : ''}`}
                      style={{ animationDelay: `${index * 100}ms` }}
-                     onClick={ai.sydney ? () => window.open(ai.sydney, "_blank") : undefined}
+                     onClick={(ai.sydney || ai.macquarie) ? () => window.open(ai.sydney || ai.macquarie, "_blank") : undefined}
                    >
                     <CardContent className="p-4 text-center">
                       {ai.image && (
