@@ -2,6 +2,7 @@ import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import technologyHeroBg from "@/assets/technology-hero-bg.png";
 
 const Technology = () => {
   const technologies = [
@@ -57,8 +58,9 @@ const Technology = () => {
       <Header />
       <main className="py-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-subtle">
-          <div className="container mx-auto px-6 text-center">
+        <section className="py-20 relative bg-gradient-subtle" style={{ backgroundImage: `url(${technologyHeroBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+          <div className="absolute inset-0 bg-background/70"></div>
+          <div className="container mx-auto px-6 text-center relative z-10">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               <span className="text-foreground">Where AI Meets</span>
               <br />
