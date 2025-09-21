@@ -76,27 +76,27 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
-        {/* Hero Section */}
+      <main 
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${aboutBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Background Overlay */}
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
         
-
         {/* Founder Section */}
-        <section 
-          className="relative overflow-hidden"
-          style={{
-            backgroundImage: `url(${aboutBackground})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
+        <section className="relative z-10">
           <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-black drop-shadow-sm animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-foreground drop-shadow-sm animate-fade-in">
               Founder & Lead Investigator
             </h2>
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
               <Card 
-                className="border-0 shadow-2xl hover:shadow-hero transition-all duration-500 animate-scale-in bg-white/95 backdrop-blur-sm cursor-pointer"
+                className="border-0 shadow-2xl hover:shadow-hero transition-all duration-500 animate-scale-in bg-card/95 backdrop-blur-sm cursor-pointer"
                 onClick={() => window.open(founder.unsw, "_blank")}
               >
                 <CardContent className="p-6 sm:p-8">
@@ -141,11 +141,11 @@ const About = () => {
         </section>
 
         {/* Team Sections */}
-        <section className="py-12 sm:py-20 bg-muted/30">
+        <section className="relative z-10 py-12 sm:py-20">
           <div className="container mx-auto px-4 sm:px-6">
             {/* Chief Investigators */}
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-center mb-8 text-foreground animate-fade-in">
+            <div className="mb-16 animate-fade-in" style={{animationDelay: '0.4s'}}>
+              <h2 className="text-2xl font-bold text-center mb-8 text-foreground">
                 Chief Investigators (CIs)
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
@@ -193,8 +193,8 @@ const About = () => {
             </div>
 
             {/* Associate Investigators */}
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-center mb-8 text-foreground animate-fade-in">
+            <div className="mb-16 animate-fade-in" style={{animationDelay: '0.6s'}}>
+              <h2 className="text-2xl font-bold text-center mb-8 text-foreground">
                 Associate Investigators (AIs)
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
@@ -224,8 +224,8 @@ const About = () => {
             </div>
 
             {/* Research Fellows & Collaborators */}
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-center mb-8 text-foreground animate-fade-in">
+            <div className="mb-16 animate-fade-in" style={{animationDelay: '0.8s'}}>
+              <h2 className="text-2xl font-bold text-center mb-8 text-foreground">
                 Research Fellows & Collaborators
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
@@ -267,8 +267,8 @@ const About = () => {
             </div>
 
             {/* Research Students */}
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-center mb-8 text-foreground animate-fade-in">
+            <div className="mb-16 animate-fade-in" style={{animationDelay: '1s'}}>
+              <h2 className="text-2xl font-bold text-center mb-8 text-foreground">
                 Research Students
               </h2>
               <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
