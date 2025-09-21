@@ -35,13 +35,11 @@ const Contact = () => {
           {/* Hero Section */}
           <section className="py-20">
             <div className="container mx-auto px-6 text-center">
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                <span className="text-foreground">Contact</span>
-                <br />
-                <span className="bg-gradient-hero bg-clip-text text-transparent">TRIBOT</span>
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Partner with us to transform emergency care. Whether you are a researcher, health professional, investor, or student, we would love to hear from you.
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+                Partner with us to transform emergency care.
+              </p>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Whether you are a researcher, health professional, investor, or student, we would love to hear from you.
               </p>
             </div>
           </section>
@@ -114,36 +112,40 @@ const Contact = () => {
                     </div>
 
                     {/* Form Fields */}
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="fullName">Full Name*</Label>
-                        <Input id="fullName" required />
+                    <div className="space-y-6">
+                      <h3 className="text-lg font-semibold text-foreground">Common fields (all enquiries):</h3>
+                      
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <Label htmlFor="fullName">Full Name*</Label>
+                          <Input id="fullName" required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="email">Email*</Label>
+                          <Input id="email" type="email" required />
+                        </div>
                       </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email*</Label>
-                        <Input id="email" type="email" required />
-                      </div>
-                    </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="organization">Organisation / Institution*</Label>
-                        <Input id="organization" required />
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <Label htmlFor="organization">Organisation / Institution*</Label>
+                          <Input id="organization" required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="country">Country / Region*</Label>
+                          <Input id="country" required />
+                        </div>
                       </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="country">Country / Region*</Label>
-                        <Input id="country" required />
-                      </div>
-                    </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message (Please avoid personal health information)*</Label>
-                      <Textarea 
-                        id="message" 
-                        required
-                        className="min-h-[120px]"
-                        placeholder="Please provide details about your enquiry..."
-                      />
+                      <div className="space-y-2">
+                        <Label htmlFor="message">Message (Please avoid personal health information)*</Label>
+                        <Textarea 
+                          id="message" 
+                          required
+                          className="min-h-[120px]"
+                          placeholder="Please provide details about your enquiry..."
+                        />
+                      </div>
                     </div>
 
                     {/* Consent & Privacy */}
