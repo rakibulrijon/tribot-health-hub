@@ -237,11 +237,11 @@ const About = () => {
                     <CardContent className="p-4 text-center">
                       {fellow.image && (
                         <div className="flex justify-center mb-3">
-                          <img 
-                            src={fellow.image} 
-                            alt={fellow.name}
-                            className="w-24 h-24 rounded-full object-cover object-center shadow-card"
-                          />
+                           <img 
+                             src={fellow.image} 
+                             alt={fellow.name}
+                             className={`w-24 h-24 rounded-full shadow-card ${fellow.name.includes('Rayhan') ? 'object-cover object-[center_20%]' : 'object-cover object-center'}`}
+                           />
                         </div>
                       )}
                       <div className="flex items-center justify-center gap-2 mb-2">
