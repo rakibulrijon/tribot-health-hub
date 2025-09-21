@@ -89,9 +89,9 @@ const About = () => {
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
         
         {/* Founder Section */}
-        <section className="relative z-10">
-          <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
-            <h1 className="text-4xl lg:text-5xl font-bold text-center mb-12 drop-shadow-sm animate-fade-in">
+        <section className="relative z-10 py-20">
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 drop-shadow-sm animate-fade-in">
               <span className="text-foreground">Founder</span>
               <br />
               <span className="bg-gradient-hero bg-clip-text text-transparent">& Lead Investigator</span>
