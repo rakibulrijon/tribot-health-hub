@@ -21,6 +21,7 @@ import dipankarImage from "@/assets/dipankar-srirag-profile.jpg";
 import paulImage from "@/assets/paul-nguyen-profile.jpg";
 import wayneImage from "@/assets/wayne-varndell-profile.jpg";
 import benjaminImage from "@/assets/benjamin-harris-roxas-profile.jpg";
+import chiImage from "@/assets/chi-ho-chan-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -54,7 +55,7 @@ const About = () => {
     { name: "Wayne Varndell", affiliation: "Prince of Wales Hospital", image: wayneImage },
     { name: "Dr Benjamin Harris-Roxas", affiliation: "UNSW", image: benjaminImage },
     { name: "Assoc Prof Holly Seale", affiliation: "UNSW", image: hollyImage },
-    { name: "Dr Chi Ho Chan", affiliation: "UNSW" },
+    { name: "Dr Chi Ho Chan", affiliation: "UNSW", image: chiImage },
     { name: "Dr Quoc Dung Nguyen", affiliation: "UNSW" },
     { name: "Mrs Brynn Quick", affiliation: "Macquarie University" },
     { name: "Dr Patrick San Gabriel", affiliation: "eHealth NSW" }
