@@ -18,6 +18,7 @@ import hollyImage from "@/assets/holly-seale-profile.jpg";
 import andrewImage from "@/assets/andrew-coggins-profile.jpg";
 import fangImage from "@/assets/fang-shen-profile.jpg";
 import dipankarImage from "@/assets/dipankar-srirag-profile.jpg";
+import paulImage from "@/assets/paul-nguyen-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -64,7 +65,7 @@ const About = () => {
   ];
 
   const researchStudents = [
-    { name: "Paul Nguyen", role: "PhD Candidate (Digital Health & AI)" },
+    { name: "Paul Nguyen", role: "PhD Candidate (Digital Health & AI)", image: paulImage },
     { name: "Dipankar Srirag", role: "PhD Candidate (AI & Healthcare Innovation)", image: dipankarImage, linkedin: "https://www.linkedin.com/in/dipankarsrirag/" }
   ];
 
