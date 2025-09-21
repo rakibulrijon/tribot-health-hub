@@ -22,6 +22,7 @@ import paulImage from "@/assets/paul-nguyen-profile.jpg";
 import wayneImage from "@/assets/wayne-varndell-profile.jpg";
 import benjaminImage from "@/assets/benjamin-harris-roxas-profile.jpg";
 import chiImage from "@/assets/chi-ho-chan-profile.jpg";
+import patrickImage from "@/assets/patrick-san-gabriel-profile.jpg";
 import aboutBackground from "@/assets/about-background.png";
 
 const About = () => {
@@ -58,7 +59,7 @@ const About = () => {
     { name: "Dr Chi Ho Chan", affiliation: "UNSW", image: chiImage },
     { name: "Dr Quoc Dung Nguyen", affiliation: "UNSW" },
     { name: "Mrs Brynn Quick", affiliation: "Macquarie University" },
-    { name: "Dr Patrick San Gabriel", affiliation: "eHealth NSW" }
+    { name: "Dr Patrick San Gabriel", affiliation: "eHealth NSW", image: patrickImage }
   ];
 
   const researchFellows = [
