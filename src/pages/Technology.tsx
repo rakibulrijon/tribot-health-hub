@@ -56,7 +56,7 @@ const Technology = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="relative" style={{ backgroundImage: `url(${technologyHeroBg})`, backgroundSize: '120%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <main className="relative" style={{ backgroundImage: `url(${technologyHeroBg})`, backgroundSize: '150%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className="absolute inset-0 bg-background/20"></div>
         
         {/* Hero Section */}
