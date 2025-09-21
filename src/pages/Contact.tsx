@@ -50,18 +50,18 @@ const Contact = () => {
           <section className="py-20">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto">
-                <Card className="border-0 shadow-card mb-12 bg-card/90 backdrop-blur-sm">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-foreground flex items-center">
+                <div className="mb-12">
+                  <div>
+                    <h2 className="text-2xl text-foreground flex items-center mb-6">
                       <div className="w-12 h-12 bg-gradient-hero rounded-lg flex items-center justify-center mr-4">
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                       </div>
                       For Investors & Strategic Partners
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
+                    </h2>
+                  </div>
+                  <div className="space-y-6">
                     <p className="text-lg text-muted-foreground leading-relaxed">
                       🚀 TRIBOT is an <span className="text-primary font-semibold">NHMRC Ideas Grant–funded innovation</span>, backed by UNSW Sydney, Bankstown-Lidcombe, Westmead and Prince of Wales Hospitals.
                     </p>
@@ -82,8 +82,8 @@ const Contact = () => {
                     <div className="bg-muted/30 p-6 rounded-lg">
                       <p className="text-muted-foreground">📄 Request our investor brief or pitch deck directly using the form below.</p>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
