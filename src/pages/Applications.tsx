@@ -71,7 +71,7 @@ const Applications = () => {
         <Header />
         <main className="py-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-subtle">
+        <section className="py-20">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               <span className="text-foreground">Global Scalability</span>
