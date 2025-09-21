@@ -58,7 +58,6 @@ const About = () => {
     { name: "Dr Benjamin Harris-Roxas", affiliation: "UNSW", image: benjaminImage },
     { name: "Assoc Prof Holly Seale", affiliation: "UNSW", image: hollyImage },
     { name: "Dr Chi Ho Chan", affiliation: "UNSW", image: chiImage },
-    { name: "Dr Quoc Dung Nguyen", affiliation: "UNSW" },
     { name: "Mrs Brynn Quick", affiliation: "Macquarie University", image: brynnImage, macquarie: "https://researchers.mq.edu.au/en/persons/brynn-quick" },
     { name: "Dr Patrick San Gabriel", affiliation: "eHealth NSW", image: patrickImage }
   ];
