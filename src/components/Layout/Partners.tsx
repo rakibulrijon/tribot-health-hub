@@ -4,15 +4,18 @@ import Autoplay from "embla-carousel-autoplay";
 import unswLogo from "@/assets/unsw-logo.png";
 import nhmrcLogo from "@/assets/nhmrc-logo.png";
 import swslhdLogo from "@/assets/swslhd-logo.webp";
+import rmitLogo from "@/assets/rmit-logo.avif";
 
 const Partners = () => {
   const partners = [
     { name: "UNSW Sydney", logo: unswLogo },
     { name: "NHMRC", logo: nhmrcLogo },
     { name: "SWSLHD", logo: swslhdLogo },
+    { name: "RMIT University", logo: rmitLogo },
     { name: "UNSW Sydney", logo: unswLogo },
     { name: "NHMRC", logo: nhmrcLogo },
     { name: "SWSLHD", logo: swslhdLogo },
+    { name: "RMIT University", logo: rmitLogo },
   ];
 
   return (
@@ -46,7 +49,7 @@ const Partners = () => {
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/5 lg:basis-1/7">
                   <div className="flex flex-col items-center justify-center h-40 group transition-all duration-700 ease-in-out">
                     <div className="transform transition-all duration-700 ease-in-out group-hover:scale-125 opacity-100">
-                      {typeof partner.logo === 'string' && (partner.logo.endsWith('.png') || partner.logo.endsWith('.webp')) ? (
+                      {typeof partner.logo === 'string' && (partner.logo.endsWith('.png') || partner.logo.endsWith('.webp') || partner.logo.endsWith('.avif')) ? (
                         <img 
                           src={partner.logo} 
                           alt={partner.name}
