@@ -59,7 +59,7 @@ const Technology = () => {
       <main className="py-20">
         {/* Hero Section */}
         <section className="py-20 relative bg-gradient-subtle" style={{ backgroundImage: `url(${technologyHeroBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-          <div className="absolute inset-0 bg-background/70"></div>
+          <div className="absolute inset-0 bg-background/20"></div>
           <div className="container mx-auto px-6 text-center relative z-10">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               <span className="text-foreground">Where AI Meets</span>
