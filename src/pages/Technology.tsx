@@ -63,11 +63,11 @@ const Technology = () => {
         <section className="py-20 relative">
           <div className="container mx-auto px-6 text-center relative z-10">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="text-foreground">Where AI Meets</span>
+              <span className="text-black">Where AI Meets</span>
               <br />
-              <span className="bg-gradient-hero bg-clip-text text-transparent">Clinical Excellence</span>
+              <span className="text-black">Clinical Excellence</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed">
               TRIBOT is built at the intersection of artificial intelligence, linguistics, and emergency medicine.
             </p>
           </div>
@@ -94,8 +94,8 @@ const Technology = () => {
             
             {/* Context-Aware Clinical Assistant */}
             <div className="max-w-4xl mx-auto mt-16 text-center relative z-10">
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                TRIBOT isn't just a translator — it's a <span className="text-primary font-semibold">context-aware clinical assistant</span> designed for the most high-stakes environment in healthcare.
+              <p className="text-xl text-black leading-relaxed">
+                TRIBOT isn't just a translator — it's a <span className="text-black font-semibold">context-aware clinical assistant</span> designed for the most high-stakes environment in healthcare.
               </p>
             </div>
           </div>
