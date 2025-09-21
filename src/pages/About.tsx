@@ -240,7 +240,7 @@ const About = () => {
                            <img 
                              src={fellow.image} 
                              alt={fellow.name}
-                             className={`w-24 h-24 rounded-full shadow-card ${fellow.name.includes('Rayhan') ? 'object-cover object-[center_20%]' : 'object-cover object-center'}`}
+                             className={`w-24 h-24 rounded-full shadow-card ${fellow.name.includes('Rayhan') ? 'object-cover object-[center_10%]' : 'object-cover object-center'}`}
                            />
                         </div>
                       )}
