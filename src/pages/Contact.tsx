@@ -2,6 +2,7 @@ import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import applicationsBackground from "@/assets/applications-background.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -19,7 +20,7 @@ const Contact = () => {
       <Header />
       <main className="py-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-subtle">
+        <section className="py-20">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               <span className="text-foreground">Contact</span>
@@ -75,10 +76,10 @@ const Contact = () => {
         </section>
 
         {/* Contact Form */}
-        <section className="py-20 bg-muted/30">
+        <section className="py-20">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <Card className="border-0 shadow-card">
+              <Card className="border-0 shadow-card bg-card/90 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-3xl text-foreground text-center mb-6">Get in Touch</CardTitle>
                   <p className="text-muted-foreground text-center">
@@ -172,7 +173,7 @@ const Contact = () => {
           <div className="container mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Quick Contact Options</h2>
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-300 text-center">
+              <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-300 text-center bg-card/90 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center text-white mx-auto mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,7 +190,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-300 text-center">
+              <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-300 text-center bg-card/90 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-accent rounded-xl flex items-center justify-center text-white mx-auto mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,7 +207,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-300 text-center">
+              <Card className="border-0 shadow-card hover:shadow-hero transition-all duration-300 text-center bg-card/90 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center text-white mx-auto mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,8 +226,10 @@ const Contact = () => {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
+        </main>
+        
+        <Footer />
+      </div>
     </div>
   );
 };
