@@ -74,57 +74,46 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      const formEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
-      
-      if (formEndpoint) {
-        const response = await fetch(formEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            reason: formData.reason,
-            fullName: formData.fullName,
-            email: formData.email,
-            organization: formData.organization,
-            country: formData.country,
-            message: formData.message,
-            wantsUpdates: formData.updates ? 'Yes' : 'No',
-          }),
-        });
+      // Use mailto approach - opens user's email client
+      const subject = `TRIBOT Contact Form - ${formData.reason}`;
+      const body = `Hello Abdullah,
 
-        if (response.ok) {
-          // Show animated checkmark instead of toast
-          setShowSuccess(true);
-          
-          // Reset form
-          setFormData({
-            reason: "",
-            fullName: "",
-            email: "",
-            organization: "",
-            country: "",
-            message: "",
-            consent: false,
-            updates: false
-          });
-        } else {
-          throw new Error('Form submission failed');
-        }
-      } else {
-        // For development/fallback
-        setShowSuccess(true);
-        setFormData({
-          reason: "",
-          fullName: "",
-          email: "",
-          organization: "",
-          country: "",
-          message: "",
-          consent: false,
-          updates: false
-        });
-      }
+I am contacting you regarding TRIBOT.
+
+Name: ${formData.fullName}
+Email: ${formData.email}
+Organization: ${formData.organization}
+Country: ${formData.country}
+
+Reason for Contact: ${formData.reason}
+
+Message:
+${formData.message}
+
+Wants Updates: ${formData.updates ? 'Yes' : 'No'}
+
+Submitted: ${new Date().toLocaleString()}
+
+Best regards,
+${formData.fullName}`;
+
+      const mailtoUrl = `mailto:abdullah.masud@unsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoUrl;
+      
+      // Show animated checkmark
+      setShowSuccess(true);
+      
+      // Reset form
+      setFormData({
+        reason: "",
+        fullName: "",
+        email: "",
+        organization: "",
+        country: "",
+        message: "",
+        consent: false,
+        updates: false
+      });
     } catch (error) {
       console.error('Form submission failed:', error);
       toast({

@@ -52,40 +52,9 @@ const PrototypeAccessForm = () => {
     setIsLoading(true);
 
     try {
-      const formEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
-      
-      if (formEndpoint) {
-        // Use Formspree to send email
-        const response = await fetch(formEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            subject: "TRIBOT Prototype Access Request",
-            name: values.name,
-            email: values.email,
-            organization: values.organization,
-            role: values.role,
-            useCase: values.useCase,
-            formType: "Prototype Access Request"
-          }),
-        });
-
-        if (response.ok) {
-          // Show animated checkmark
-          setShowSuccess(true);
-          
-          // Reset form and close dialog
-          form.reset();
-          setIsOpen(false);
-        } else {
-          throw new Error('Form submission failed');
-        }
-      } else {
-        // Fallback to mailto for local development
-        const subject = "TRIBOT Prototype Access Request";
-        const body = `Hello,
+      // Use mailto approach - opens user's email client
+      const subject = "TRIBOT Prototype Access Request";
+      const body = `Hello Abdullah,
 
 I would like to request access to the TRIBOT prototype.
 
@@ -97,16 +66,22 @@ Role: ${values.role}
 Intended Use Case:
 ${values.useCase}
 
+Submitted: ${new Date().toLocaleString()}
+
 Thank you for considering my request.
 
 Best regards,
 ${values.name}`;
 
-        const mailtoUrl = `mailto:abdullah.masud@unsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoUrl;
-        setShowSuccess(true);
-        setIsOpen(false);
-      }
+      const mailtoUrl = `mailto:abdullah.masud@unsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoUrl;
+      
+      // Show animated checkmark
+      setShowSuccess(true);
+      
+      // Reset form and close dialog
+      form.reset();
+      setIsOpen(false);
     } catch (error) {
       console.error('Form submission failed:', error);
       toast({
