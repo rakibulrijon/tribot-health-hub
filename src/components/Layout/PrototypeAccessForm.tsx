@@ -19,6 +19,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useToast } from "@/hooks/use-toast";
+import AnimatedCheckmark from "@/components/ui/animated-checkmark";
 import * as z from "zod";
 
 const formSchema = z.object({
@@ -31,6 +33,9 @@ const formSchema = z.object({
 
 const PrototypeAccessForm = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const { toast } = useToast();
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -43,9 +48,44 @@ const PrototypeAccessForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    const subject = "TRIBOT Prototype Access Request";
-    const body = `Hello,
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsLoading(true);
+
+    try {
+      const formEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+      
+      if (formEndpoint) {
+        // Use Formspree to send email
+        const response = await fetch(formEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            subject: "TRIBOT Prototype Access Request",
+            name: values.name,
+            email: values.email,
+            organization: values.organization,
+            role: values.role,
+            useCase: values.useCase,
+            formType: "Prototype Access Request"
+          }),
+        });
+
+        if (response.ok) {
+          // Show animated checkmark
+          setShowSuccess(true);
+          
+          // Reset form and close dialog
+          form.reset();
+          setIsOpen(false);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } else {
+        // Fallback to mailto for local development
+        const subject = "TRIBOT Prototype Access Request";
+        const body = `Hello,
 
 I would like to request access to the TRIBOT prototype.
 
@@ -62,13 +102,32 @@ Thank you for considering my request.
 Best regards,
 ${values.name}`;
 
-    const mailtoUrl = `mailto:abdullah.masud@unsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoUrl;
-    setIsOpen(false);
+        const mailtoUrl = `mailto:abdullah.masud@unsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+        setShowSuccess(true);
+        setIsOpen(false);
+      }
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      toast({
+        title: "Failed to send request",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <>
+      {/* Animated Checkmark */}
+      <AnimatedCheckmark 
+        isVisible={showSuccess} 
+        onComplete={() => setShowSuccess(false)} 
+      />
+      
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <Button variant="hero" size="lg" className="text-lg px-8 py-6">
           Try TRIBOT Prototype
@@ -159,17 +218,19 @@ ${values.name}`;
                 type="button"
                 variant="outline"
                 onClick={() => setIsOpen(false)}
+                disabled={isLoading}
               >
                 Cancel
               </Button>
-              <Button type="submit" variant="hero">
-                Request Access
+              <Button type="submit" variant="hero" disabled={isLoading}>
+                {isLoading ? 'Sending...' : 'Request Access'}
               </Button>
             </div>
           </form>
         </Form>
       </DialogContent>
     </Dialog>
+    </>
   );
 };
 

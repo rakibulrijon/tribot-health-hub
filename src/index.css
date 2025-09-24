@@ -152,4 +152,31 @@ All colors MUST be HSL.
       transform: translateY(-20px);
     }
   }
+
+  /* Animated Checkmark Animations */
+  @keyframes draw-circle {
+    0% {
+      stroke-dasharray: 0 126;
+    }
+    100% {
+      stroke-dasharray: 126 126;
+    }
+  }
+
+  @keyframes draw-check {
+    0% {
+      stroke-dashoffset: 12;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animate-draw-circle {
+    animation: draw-circle 0.6s ease-out;
+  }
+
+  .animate-draw-check {
+    animation: draw-check 0.6s ease-out 0.3s both;
+  }
 }

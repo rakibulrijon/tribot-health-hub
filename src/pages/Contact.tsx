@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,14 +7,135 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useToast } from "@/hooks/use-toast";
+import AnimatedCheckmark from "@/components/ui/animated-checkmark";
 import applicationsBackground from "@/assets/applications-background.png";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  
+  // Form state
+  const [formData, setFormData] = useState({
+    reason: "",
+    fullName: "",
+    email: "",
+    organization: "",
+    country: "",
+    message: "",
+    consent: false,
+    updates: false
+  });
+
   const contactReasons = [
     "🔬 Research & Clinical Collaboration",
     "💼 Investment & Partnerships", 
     "🎓 Students & Careers"
   ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleCheckboxChange = (name: string, checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      [name]: checked
+    }));
+  };
+
+  const handleReasonChange = (reason: string) => {
+    setFormData(prev => ({
+      ...prev,
+      reason: reason
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Basic validation
+    if (!formData.reason || !formData.fullName || !formData.email || 
+        !formData.organization || !formData.country || !formData.message || 
+        !formData.consent) {
+      toast({
+        title: "Please fill in all required fields",
+        description: "All fields marked with * are required",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const formEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+      
+      if (formEndpoint) {
+        const response = await fetch(formEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            reason: formData.reason,
+            fullName: formData.fullName,
+            email: formData.email,
+            organization: formData.organization,
+            country: formData.country,
+            message: formData.message,
+            wantsUpdates: formData.updates ? 'Yes' : 'No',
+          }),
+        });
+
+        if (response.ok) {
+          // Show animated checkmark instead of toast
+          setShowSuccess(true);
+          
+          // Reset form
+          setFormData({
+            reason: "",
+            fullName: "",
+            email: "",
+            organization: "",
+            country: "",
+            message: "",
+            consent: false,
+            updates: false
+          });
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } else {
+        // For development/fallback
+        setShowSuccess(true);
+        setFormData({
+          reason: "",
+          fullName: "",
+          email: "",
+          organization: "",
+          country: "",
+          message: "",
+          consent: false,
+          updates: false
+        });
+      }
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div 
@@ -28,6 +150,12 @@ const Contact = () => {
     >
       {/* Background overlay for better text readability */}
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+      
+      {/* Animated Checkmark */}
+      <AnimatedCheckmark 
+        isVisible={showSuccess} 
+        onComplete={() => setShowSuccess(false)} 
+      />
       
       <div className="relative z-10">
         <Header />
@@ -100,85 +228,147 @@ const Contact = () => {
                     </p>
                   </CardHeader>
                   <CardContent className="space-y-8">
-                    {/* Reason for Contact */}
-                    <div className="space-y-4">
-                      <Label className="text-lg font-semibold text-foreground">Reason for Contact (choose one):</Label>
-                      <div className="space-y-3">
-                        {contactReasons.map((reason, index) => (
-                          <div key={index} className="flex items-center space-x-3">
-                            <input type="radio" name="reason" id={`reason-${index}`} className="text-primary" />
-                            <label htmlFor={`reason-${index}`} className="text-muted-foreground">{reason}</label>
+                    <form onSubmit={handleSubmit} className="space-y-8" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                      {/* Hidden fields for Netlify */}
+                      <input type="hidden" name="form-name" value="contact" />
+                      <div style={{ display: 'none' }}>
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                      </div>
+                      
+                      {/* Reason for Contact */}
+                      <div className="space-y-4">
+                        <Label className="text-lg font-semibold text-foreground">Reason for Contact (choose one):</Label>
+                        <div className="space-y-3">
+                          {contactReasons.map((reason, index) => (
+                            <div key={index} className="flex items-center space-x-3">
+                              <input 
+                                type="radio" 
+                                name="reason" 
+                                id={`reason-${index}`} 
+                                className="text-primary" 
+                                checked={formData.reason === reason}
+                                onChange={() => handleReasonChange(reason)}
+                              />
+                              <label htmlFor={`reason-${index}`} className="text-muted-foreground cursor-pointer">{reason}</label>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Form Fields */}
+                      <div className="space-y-6">
+                        <h3 className="text-lg font-semibold text-foreground">Common fields (all enquiries):</h3>
+                        
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div className="space-y-2">
+                            <Label htmlFor="fullName">Full Name*</Label>
+                            <Input 
+                              id="fullName" 
+                              name="fullName"
+                              value={formData.fullName}
+                              onChange={handleInputChange}
+                              required 
+                            />
                           </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Form Fields */}
-                    <div className="space-y-6">
-                      <h3 className="text-lg font-semibold text-foreground">Common fields (all enquiries):</h3>
-                      
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <Label htmlFor="fullName">Full Name*</Label>
-                          <Input id="fullName" required />
+                          <div className="space-y-2">
+                            <Label htmlFor="email">Email*</Label>
+                            <Input 
+                              id="email" 
+                              name="email"
+                              type="email" 
+                              value={formData.email}
+                              onChange={handleInputChange}
+                              required 
+                            />
+                          </div>
                         </div>
+
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div className="space-y-2">
+                            <Label htmlFor="organization">Organisation / Institution*</Label>
+                            <Input 
+                              id="organization" 
+                              name="organization"
+                              value={formData.organization}
+                              onChange={handleInputChange}
+                              required 
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="country">Country / Region*</Label>
+                            <Input 
+                              id="country" 
+                              name="country"
+                              value={formData.country}
+                              onChange={handleInputChange}
+                              required 
+                            />
+                          </div>
+                        </div>
+
                         <div className="space-y-2">
-                          <Label htmlFor="email">Email*</Label>
-                          <Input id="email" type="email" required />
+                          <Label htmlFor="message">Message (Please avoid personal health information)*</Label>
+                          <Textarea 
+                            id="message" 
+                            name="message"
+                            value={formData.message}
+                            onChange={handleInputChange}
+                            required
+                            className="min-h-[120px]"
+                            placeholder="Please provide details about your enquiry..."
+                          />
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <Label htmlFor="organization">Organisation / Institution*</Label>
-                          <Input id="organization" required />
+                      {/* Consent & Privacy */}
+                      <div className="space-y-4 border-t pt-6">
+                        <h3 className="font-semibold text-foreground">Consent & Privacy</h3>
+                        
+                        <div className="flex items-start space-x-3">
+                          <Checkbox 
+                            id="consent" 
+                            checked={formData.consent}
+                            onCheckedChange={(checked) => handleCheckboxChange('consent', checked as boolean)}
+                            required 
+                            className="mt-1" 
+                          />
+                          <label htmlFor="consent" className="text-sm text-muted-foreground">
+                            I agree to the data handling notice.*
+                          </label>
                         </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="country">Country / Region*</Label>
-                          <Input id="country" required />
+                        
+                        <p className="text-sm text-muted-foreground">
+                          We use your details only to respond to your enquiry. TRIBOT does not provide medical advice via this form. Please do not include personal health information.
+                        </p>
+                        
+                        <div className="flex items-start space-x-3">
+                          <Checkbox 
+                            id="updates" 
+                            checked={formData.updates}
+                            onCheckedChange={(checked) => handleCheckboxChange('updates', checked as boolean)}
+                            className="mt-1" 
+                          />
+                          <label htmlFor="updates" className="text-sm text-muted-foreground">
+                            Email me TRIBOT research and innovation updates (optional).
+                          </label>
                         </div>
                       </div>
 
-                      <div className="space-y-2">
-                        <Label htmlFor="message">Message (Please avoid personal health information)*</Label>
-                        <Textarea 
-                          id="message" 
-                          required
-                          className="min-h-[120px]"
-                          placeholder="Please provide details about your enquiry..."
-                        />
-                      </div>
-                    </div>
-
-                    {/* Consent & Privacy */}
-                    <div className="space-y-4 border-t pt-6">
-                      <h3 className="font-semibold text-foreground">Consent & Privacy</h3>
-                      
-                      <div className="flex items-start space-x-3">
-                        <Checkbox id="consent" required className="mt-1" />
-                        <label htmlFor="consent" className="text-sm text-muted-foreground">
-                          I agree to the data handling notice.*
-                        </label>
-                      </div>
-                      
-                      <p className="text-sm text-muted-foreground">
-                        We use your details only to respond to your enquiry. TRIBOT does not provide medical advice via this form. Please do not include personal health information.
-                      </p>
-                      
-                      <div className="flex items-start space-x-3">
-                        <Checkbox id="updates" className="mt-1" />
-                        <label htmlFor="updates" className="text-sm text-muted-foreground">
-                          Email me TRIBOT research and innovation updates (optional).
-                        </label>
-                      </div>
-                    </div>
-
-                    <Button variant="hero" size="lg" className="w-full text-lg">
-                      Send Message
-                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
-                    </Button>
+                      <Button 
+                        type="submit" 
+                        variant="hero" 
+                        size="lg" 
+                        className="w-full text-lg"
+                        disabled={isLoading}
+                      >
+                        {isLoading ? 'Sending...' : 'Send Message'}
+                        {!isLoading && (
+                          <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                          </svg>
+                        )}
+                      </Button>
+                    </form>
                   </CardContent>
                 </Card>
               </div>
