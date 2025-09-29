@@ -32,7 +32,7 @@ const About = () => {
     
     positions: [
       "Senior Lecturer & Lead, Digital Health & AI – UNSW Sydney",
-      "Resident Medical Officer – Bankstown-Lidcombe Hospital"
+      "ED Clinician, Bankstown Lidcombe Hospital, NSW"
     ],
     bio: "Dr Narasimhan is a WHO-recognised expert in AI and Digital Health, with a strong track record in epidemiology, health systems, and emergency medicine. He has led multimillion-dollar digital health projects, including TRIBOT and the EPIWATCH AI-based epidemic preparedness platform.",
     image: padmaImage,
