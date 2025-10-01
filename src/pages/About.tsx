@@ -143,6 +143,7 @@ const About = () => {
               </Card>
             </div>
           </div>
+          
         </section>
 
         {/* Team Sections */}
