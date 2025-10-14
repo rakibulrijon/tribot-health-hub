@@ -74,8 +74,8 @@ const Technology = () => {
           <section className="py-20">
             <div className="container mx-auto px-6 text-center">
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                <span className="text-foreground">Where AI Meets</span>
-                <br />
+                <span className="text-foreground">Where AI Meets </span>
+           
                 <span className="bg-gradient-hero bg-clip-text text-transparent">Clinical Excellence</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -83,9 +83,33 @@ const Technology = () => {
               </p>
             </div>
           </section>
-
+        <section className="py-8 bg-transparent ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            TRIBOT Technology Overview
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Watch our comprehensive overview of TRIBOT's technology and capabilities
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto">
+          <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              src="https://www.youtube.com/embed/qxsoK-ucjAY?start=4"
+              title="TRIBOT Technology Overview"
+              className="absolute inset-0 w-full h-full"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </div>
+    </section>
           {/* Technology Cards */}
-          <section className="py-20">
+          <section className="pt-8 pb-20">
             <div className="container mx-auto px-6">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {technologies.map((tech, index) => (
