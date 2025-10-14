@@ -69,30 +69,23 @@ const Technology = () => {
       
       <div className="relative z-10">
         <Header />
-        <main className="py-20">
+        <main className="pt-0 pb-20">
           {/* Hero Section */}
           <section className="py-20">
             <div className="container mx-auto px-6 text-center">
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                <span className="text-foreground">Where AI Meets </span>
+                <span className="text-foreground">TRIBOT  </span>
            
-                <span className="bg-gradient-hero bg-clip-text text-transparent">Clinical Excellence</span>
+                <span className="bg-gradient-hero bg-clip-text text-transparent">Technology Overview</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                TRIBOT is built at the intersection of artificial intelligence, linguistics, and emergency medicine.
+                 Watch our comprehensive overview of TRIBOT's technology and capabilities
               </p>
             </div>
           </section>
         <section className="py-8 bg-transparent ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            TRIBOT Technology Overview
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Watch our comprehensive overview of TRIBOT's technology and capabilities
-          </p>
-        </div>
+        
         
         <div className="max-w-4xl mx-auto">
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
@@ -109,7 +102,7 @@ const Technology = () => {
       </div>
     </section>
           {/* Technology Cards */}
-          <section className="pt-8 pb-20">
+          <section className="pt-2 pb-20">
             <div className="container mx-auto px-6">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {technologies.map((tech, index) => (
