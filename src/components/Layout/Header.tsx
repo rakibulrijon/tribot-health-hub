@@ -27,7 +27,6 @@ const Header = () => {
     { path: '/', label: 'HOME' },
     { path: '/technology', label: 'TECHNOLOGY' },
     { path: '/applications', label: 'APPLICATIONS' },
-    { path: '/research', label: 'RESEARCH' },
     { path: '/about', label: 'ABOUT' },
     { path: '/contact', label: 'CONTACT' },
   ];
