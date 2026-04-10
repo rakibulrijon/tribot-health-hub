@@ -76,7 +76,7 @@ const Contact = () => {
     try {
       // Use mailto approach - opens user's email client
       const subject = `TRIBOT Contact Form - ${formData.reason}`;
-      const body = `Hello Abdullah,
+      const body = `Hello Rejon,
 
 I am contacting you regarding TRIBOT.
 
@@ -97,7 +97,7 @@ Submitted: ${new Date().toLocaleString()}
 Best regards,
 ${formData.fullName}`;
 
-      const mailtoUrl = `mailto:abdullah.masud@unsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoUrl = `mailto:r.rejon@unsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.location.href = mailtoUrl;
       
       // Show animated checkmark
