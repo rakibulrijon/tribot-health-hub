@@ -64,7 +64,7 @@ const About = () => {
   ];
 
   const researchFellows = [
-    { name: "Abdullah Masud", role: "AI/ML Research Fellow", image: abdullahImage, linkedin: "https://www.linkedin.com/in/abdullah-al-masud-27january1986/" },
+    { name: "Abdullah Masud", role: "AI/ML Research", image: abdullahImage, linkedin: "https://www.linkedin.com/in/abdullah-al-masud-27january1986/" },
     { name: "Joseph Zhu", role: "Data Science & Engineering", image: josephImage, linkedin: "https://www.linkedin.com/in/zhujoseph/" },
     { name: "Rakibul Hassan Rejon", role: "Frontend & UI/UX", image: rejonImage, linkedin: "https://www.linkedin.com/in/rakibul-hassan-rejon-912410235/"},
     { name: "Suzan Makhloof", role: "Arabic Language", image: null },
