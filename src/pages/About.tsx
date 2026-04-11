@@ -25,6 +25,7 @@ import chiImage from "@/assets/chi-ho-chan-profile.jpg";
 import patrickImage from "@/assets/patrick-san-gabriel-profile.jpg";
 import brynnImage from "@/assets/brynn-quick-profile.jpg";
 import aboutBackground from "@/assets/about-background-gradient.png";
+import rejonImage from "@/assets/Rejon-profile.jpg";
 
 const About = () => {
   const founder = {
@@ -65,7 +66,7 @@ const About = () => {
   const researchFellows = [
     { name: "Abdullah Masud", role: "AI/ML Research Fellow", image: abdullahImage, linkedin: "https://www.linkedin.com/in/abdullah-al-masud-27january1986/" },
     { name: "Joseph Zhu", role: "Data Science & Engineering", image: josephImage, linkedin: "https://www.linkedin.com/in/zhujoseph/" },
-    { name: "Md Abu Rayhan", role: "Frontend & UI/UX", image: rayhanImage, linkedin: "https://www.linkedin.com/in/mdaburayhann/" },
+    { name: "Rakibul Hassan Rejon", role: "Frontend & UI/UX", image: rejonImage, linkedin: "https://www.linkedin.com/in/rakibul-hassan-rejon-912410235/"},
     { name: "Suzan Makhloof", role: "Arabic Language", image: null },
     { name: "Pushkal Garg", role: "Machine learning (ML)", image: null },
     { name: "Sam Hoballah", role: "Arabic Language", image: null }
