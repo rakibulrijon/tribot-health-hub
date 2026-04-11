@@ -54,7 +54,7 @@ const PrototypeAccessForm = () => {
     try {
       // Use mailto approach - opens user's email client
       const subject = "TRIBOT Prototype Access Request";
-      const body = `Hello Abdullah,
+      const body = `Hello Rejon,
 
 I would like to request access to the TRIBOT prototype.
 
