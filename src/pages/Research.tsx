@@ -3,6 +3,7 @@ import Footer from "@/components/Layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import researchBackground from "@/assets/research-background.png";
+import SEOHead from "@/components/SEOHead";
 
 const Research = () => {
   const researchPhases = [
@@ -43,94 +44,101 @@ const Research = () => {
   ];
 
 
-  return (
-    <div 
-      className="min-h-screen relative"
-      style={{
-        backgroundImage: `url(${researchBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
-      {/* Background overlay for better text readability */}
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
-      
-      <div className="relative z-10">
-        <Header />
-        <main className="py-20">
-          {/* Hero Section */}
-          <section className="py-20">
-            <div className="container mx-auto px-6 text-center">
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                <span className="text-foreground">Rigorous Science.</span>
-                <br />
-                <span className="bg-gradient-hero bg-clip-text text-transparent">Real-World Impact.</span>
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                TRIBOT is not just an innovation but evidence-driven research designed to transform practice.
-              </p>
-            </div>
-          </section>
-
-          {/* Research Phases */}
-          <section className="py-20">
-            <div className="container mx-auto px-6">
-              <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {researchPhases.map((phase, index) => (
-                  <Card key={index} className="border-0 shadow-card hover:shadow-hero transition-all duration-300 bg-card/90 backdrop-blur-sm">
-                    <CardHeader>
-                      <div className="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center text-white mb-4">
-                        {phase.icon}
-                      </div>
-                      <CardTitle className="text-xl text-foreground">{phase.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground leading-relaxed">{phase.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+return (
+    <>
+      <SEOHead 
+        title="Research - TRIBOT AI-Powered Triage System"
+        description="TRIBOT research phases - Development, Simulation Testing, and Real-World Evaluation in NSW Emergency Departments."
+        url="https://tribot.health/research"
+      />
+      <div 
+        className="min-h-screen relative"
+        style={{
+          backgroundImage: `url(${researchBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Background overlay for better text readability */}
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+        
+        <div className="relative z-10">
+          <Header />
+          <main className="py-20">
+            {/* Hero Section */}
+            <section className="py-20">
+              <div className="container mx-auto px-6 text-center">
+                <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+                  <span className="text-foreground">Rigorous Science.</span>
+                  <br />
+                  <span className="bg-gradient-hero bg-clip-text text-transparent">Real-World Impact.</span>
+                </h1>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                  TRIBOT is not just an innovation but evidence-driven research designed to transform practice.
+                </p>
               </div>
-            </div>
-          </section>
+            </section>
 
-          {/* Key Outcomes */}
-          <section className="py-20">
-            <div className="container mx-auto px-6">
-              <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Key Outcomes Studied</h2>
-              <div className="max-w-4xl mx-auto">
-                <div className="grid md:grid-cols-2 gap-6">
-                  {keyOutcomes.map((outcome, index) => (
-                    <div key={index} className="flex items-center space-x-4 p-6 rounded-lg bg-card/90 backdrop-blur-sm hover:shadow-card transition-all duration-300">
-                      <div className="w-8 h-8 bg-gradient-hero rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p className="text-foreground font-medium">{outcome}</p>
-                    </div>
+            {/* Research Phases */}
+            <section className="py-20">
+              <div className="container mx-auto px-6">
+                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                  {researchPhases.map((phase, index) => (
+                    <Card key={index} className="border-0 shadow-card hover:shadow-hero transition-all duration-300 bg-card/90 backdrop-blur-sm">
+                      <CardHeader>
+                        <div className="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center text-white mb-4">
+                          {phase.icon}
+                        </div>
+                        <CardTitle className="text-xl text-foreground">{phase.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground leading-relaxed">{phase.description}</p>
+                      </CardContent>
+                    </Card>
                   ))}
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          {/* Dissemination */}
-          <section className="py-20">
-            <div className="container mx-auto px-6">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-8 text-foreground">Dissemination</h2>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  Our findings will be published in leading AI and health journals (e.g., Nature Machine Intelligence, PLoS Digital Health, Lancet Digital Health) and shared at global conferences (HIMSS, MedInfo, IEEE).
-                </p>
+            {/* Key Outcomes */}
+            <section className="py-20">
+              <div className="container mx-auto px-6">
+                <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Key Outcomes Studied</h2>
+                <div className="max-w-4xl mx-auto">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {keyOutcomes.map((outcome, index) => (
+                      <div key={index} className="flex items-center space-x-4 p-6 rounded-lg bg-card/90 backdrop-blur-sm hover:shadow-card transition-all duration-300">
+                        <div className="w-8 h-8 bg-gradient-hero rounded-full flex items-center justify-center flex-shrink-0">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <p className="text-foreground font-medium">{outcome}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </section>
-        </main>
-        <Footer />
+            </section>
+
+            {/* Dissemination */}
+            <section className="py-20">
+              <div className="container mx-auto px-6">
+                <div className="max-w-4xl mx-auto text-center">
+                  <h2 className="text-3xl font-bold mb-8 text-foreground">Dissemination</h2>
+                  <p className="text-xl text-muted-foreground leading-relaxed">
+                    Our findings will be published in leading AI and health journals (e.g., Nature Machine Intelligence, PLoS Digital Health, Lancet Digital Health) and shared at global conferences (HIMSS, MedInfo, IEEE).
+                  </p>
+                </div>
+              </div>
+            </section>
+          </main>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

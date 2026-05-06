@@ -3,6 +3,7 @@ import Footer from "@/components/Layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import applicationsBackground from "@/assets/applications-background.png";
+import SEOHead from "@/components/SEOHead";
 
 const Applications = () => {
   const applications = [
@@ -53,71 +54,78 @@ const Applications = () => {
     }
   ];
 
-  return (
-    <div 
-      className="min-h-screen relative"
-      style={{
-        backgroundImage: `url(${applicationsBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
-      {/* Background overlay for better text readability */}
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
-      
-      <div className="relative z-10">
-        <Header />
-        <main className="py-20">
-        {/* Hero Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="text-foreground">Global Scalability</span>
-              <br />
-              <span className="bg-gradient-hero bg-clip-text text-transparent">Multi-Sector Use</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              TRIBOT is designed for global scalability and multi-sector use:
-            </p>
-          </div>
-        </section>
-
-        {/* Applications Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {applications.map((app, index) => (
-                <Card key={index} className="border-0 shadow-card hover:shadow-hero transition-all duration-300 bg-card/90 backdrop-blur-sm">
-                  <CardHeader>
-                    <div className="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center text-white mb-4">
-                      {app.icon}
-                    </div>
-                    <CardTitle className="text-xl text-foreground">{app.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">{app.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Future Extensions */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                TRIBOT's future extends into <span className="text-primary font-semibold">wearables, home health monitoring, and multilingual patient education</span>, making it a foundation for next-generation digital health.
+return (
+    <>
+      <SEOHead 
+        title="Applications - TRIBOT AI-Powered Triage System"
+        description="TRIBOT applications in Emergency Departments, Hospitals, Telehealth, Aged Care, and Community Health - designed for global scalability."
+        url="https://tribot.health/applications"
+      />
+      <div 
+        className="min-h-screen relative"
+        style={{
+          backgroundImage: `url(${applicationsBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Background overlay for better text readability */}
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+        
+        <div className="relative z-10">
+          <Header />
+          <main className="py-20">
+          {/* Hero Section */}
+          <section className="py-20">
+            <div className="container mx-auto px-6 text-center">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+                <span className="text-foreground">Global Scalability</span>
+                <br />
+                <span className="bg-gradient-hero bg-clip-text text-transparent">Multi-Sector Use</span>
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                TRIBOT is designed for global scalability and multi-sector use:
               </p>
             </div>
-          </div>
-        </section>
-        </main>
-        <Footer />
+          </section>
+
+          {/* Applications Grid */}
+          <section className="py-20">
+            <div className="container mx-auto px-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {applications.map((app, index) => (
+                  <Card key={index} className="border-0 shadow-card hover:shadow-hero transition-all duration-300 bg-card/90 backdrop-blur-sm">
+                    <CardHeader>
+                      <div className="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center text-white mb-4">
+                        {app.icon}
+                      </div>
+                      <CardTitle className="text-xl text-foreground">{app.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground leading-relaxed">{app.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </section>
+          {/* Future Extensions */}
+          <section className="py-20">
+            <div className="container mx-auto px-6">
+              <div className="max-w-4xl mx-auto text-center">
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  TRIBOT's future extends into <span className="text-primary font-semibold">wearables, home health monitoring, and multilingual patient education</span>, making it a foundation for next-generation digital health.
+                </p>
+              </div>
+            </div>
+          </section>
+          </main>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

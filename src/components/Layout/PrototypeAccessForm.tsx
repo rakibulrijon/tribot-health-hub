@@ -54,7 +54,7 @@ const PrototypeAccessForm = () => {
     try {
       // Use mailto approach - opens user's email client
       const subject = "TRIBOT Prototype Access Request";
-      const body = `Hello Abdullah,
+      const body = `Hello Team,
 
 I would like to request access to the TRIBOT prototype.
 
@@ -73,7 +73,7 @@ Thank you for considering my request.
 Best regards,
 ${values.name}`;
 
-      const mailtoUrl = `mailto:abdullah.masud@unsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoUrl = `mailto:tribot.triage@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.location.href = mailtoUrl;
       
       // Show animated checkmark

@@ -3,21 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRIBOT</title>
-    <meta name="description" content="TRIBOT is a conversational AI chatbot designed to bridge language barriers in emergency care through real-time multilingual interpretation and clinically validated triage classification.">
-    <meta name="author" content="TRIBOT" />
-    <meta name="keywords" content="AI triage, emergency care, multilingual AI, healthcare technology, emergency department, medical AI, patient safety">
+    <title>TRIBOT - AI-Powered Multilingual Triage System</title>
+    <meta name="description" content="TRIBOT is an AI-powered multilingual triage system for Emergency Departments, developed by UNSW Medicine & Health to reduce triage delays and improve equity in Australian EDs.">
+    <meta name="author" content="TRIBOT, UNSW Medicine & Health" />
+    <meta name="keywords" content="AI triage, emergency care, multilingual AI, healthcare technology, emergency department, medical AI, patient safety, TRIBOT, UNSW, digital health">
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
-    <meta property="og:title" content="TRIBOT - Transforming Emergency Care with AI-Powered Triage" />
-    <meta property="og:description" content="TRIBOT is a conversational AI chatbot designed to bridge language barriers in emergency care through real-time multilingual interpretation and clinically validated triage classification." />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/oWF5gT3JN3VcFjMPJyyZpCGqN8d2/social-images/social-1758089282798-tribot-logo.png">
+    <meta property="og:site_name" content="TRIBOT" />
+    <meta property="og:title" content="TRIBOT - AI-Powered Multilingual Triage System" />
+    <meta property="og:description" content="TRIBOT is an AI-powered multilingual triage system for Emergency Departments, developed by UNSW Medicine & Health to reduce triage delays and improve equity in Australian EDs." />
+    <meta property="og:image" content="/tribot-logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://tribot.health" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/oWF5gT3JN3VcFjMPJyyZpCGqN8d2/social-images/social-1758089282798-tribot-logo.png">
-    <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/gpt-engineer-file-uploads/oWF5gT3JN3VcFjMPJyyZpCGqN8d2/uploads/1758089247285-tribot-logo.png">
-</head>
+    <meta name="twitter:site" content="@TRIBOT_AU" />
+    <meta name="twitter:title" content="TRIBOT - AI-Powered Multilingual Triage System" />
+    <meta name="twitter:description" content="TRIBOT is an AI-powered multilingual triage system for Emergency Departments, developed by UNSW Medicine & Health to reduce triage delays and improve equity in Australian EDs." />
+    <meta name="twitter:image" content="/tribot-logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+
+    <!-- Schema.org JSON-LD for SoftwareApplication + MedicalOrganization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "TRIBOT",
+          "alternateName": "Triage Robot",
+          "description": "AI-powered multilingual triage system for Emergency Departments developed by UNSW Medicine & Health to reduce triage delays and improve equity in Australian EDs.",
+          "url": "https://tribot.health",
+          "applicationCategory": "HealthApplication",
+          "applicationSubCategory": "MedicalTriage",
+          "operatingSystem": "Web, iOS, Android",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "AUD",
+            "availability": "https://schema.org/InStock"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "UNSW Medicine & Health",
+            "url": "https://www.unsw.edu.au/medicine-health"
+          },
+          "creator": {
+            "@type": "Organization",
+            "name": "UNSW Medicine & Health",
+            "url": "https://www.unsw.edu.au/medicine-health"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "UNSW Medicine & Health",
+            "url": "https://www.unsw.edu.au/medicine-health"
+          },
+          "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+          "softwareVersion": "1.0.0",
+          "releaseNotes": "Initial release for Emergency Department triage",
+          "softwareHelp": "https://tribot.health/technology"
+        },
+        {
+          "@type": "MedicalOrganization",
+          "name": "TRIBOT Research Team",
+          "alternateName": "UNSW Medicine & Health - Digital Health & AI",
+          "description": "Research team developing AI-powered healthcare solutions for emergency medicine at UNSW Sydney.",
+          "url": "https://tribot.health",
+          "logo": "https://tribot.health/tribot-logo.png",
+          "image": "https://tribot.health/tribot-logo.png",
+          "email": "tribot@unsw.edu.au",
+          "telephone": "+61-2-9385-0000",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Australia"
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://tribot.health",
+            "availability": "https://schema.org/OnlineOnly"
+          },
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "UNSW Sydney",
+            "url": "https://www.unsw.edu.au"
+          },
+          "department": {
+            "@type": "Organization",
+            "name": "UNSW Medicine & Health",
+            "url": "https://www.unsw.edu.au/medicine-health"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Australia",
+            "addressRegion": "NSW",
+            "addressLocality": "Sydney"
+          },
+          "sameAs": [
+            "https://www.unsw.edu.au/staff/padmanesan-narasimhan"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "TRIBOT",
+          "url": "https://tribot.health",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://tribot.health/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>

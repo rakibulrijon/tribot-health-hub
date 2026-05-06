@@ -1,6 +1,7 @@
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import SEOHead from "@/components/SEOHead";
 import padmaImage from "@/assets/padma-narasimhan.jpg";
 import rayhanImage from "@/assets/rayhan-profile.jpg";
 import abdullahImage from "@/assets/abdullah-profile.jpg";
@@ -77,9 +78,15 @@ const About = () => {
     { name: "Dipankar Srirag", role: "PhD Candidate (AI & Healthcare Innovation)", image: dipankarImage, linkedin: "https://www.linkedin.com/in/dipankarsrirag/" }
   ];
 
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
+return (
+    <>
+      <SEOHead 
+        title="About TRIBOT - Our Team | UNSW Medicine & Health"
+        description="Meet the TRIBOT research team - world-class experts in clinical medicine, AI engineering, linguistics, and health systems from UNSW Sydney."
+        url="https://tribot.health/about"
+      />
+      <div className="min-h-screen bg-background">
+        <Header />
       <main 
         className="relative overflow-hidden"
         style={{
@@ -327,9 +334,10 @@ const About = () => {
             </div>
           </div>
         </section>
-      </main>
+</main>
       <Footer />
     </div>
+    </>
   );
 };
 
